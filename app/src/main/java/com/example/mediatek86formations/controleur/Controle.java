@@ -4,6 +4,7 @@ import com.example.mediatek86formations.modele.AccesDistant;
 import com.example.mediatek86formations.modele.Formation;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Controle {
 
@@ -49,17 +50,16 @@ public class Controle {
      * @return
      */
     public ArrayList<Formation> getLesFormationFiltre(String filtre){
-        ArrayList<Formation> lesFormationsFiltre = new ArrayList<>();
+        ArrayList<Formation> lstFiltre = new ArrayList<>();
         for(Formation uneFormation : lesFormations){
             if(uneFormation.getTitle().toUpperCase().contains(filtre.toUpperCase())){
-                lesFormationsFiltre.add(uneFormation);
+                lstFiltre.add(uneFormation);
             }
         }
-        return lesFormationsFiltre;
+        return lstFiltre;
     }
 
     public void setLesFormations(ArrayList<Formation> lesFormations) {
         this.lesFormations = lesFormations;
     }
-
 }

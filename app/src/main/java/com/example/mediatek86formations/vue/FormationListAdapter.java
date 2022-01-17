@@ -64,7 +64,7 @@ public class FormationListAdapter extends BaseAdapter {
     }
 
     /**
-     * Cobstruction de la ligne
+     * Construction de la ligne
      * @param i
      * @param view
      * @param viewGroup

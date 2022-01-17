@@ -2,13 +2,16 @@ package com.example.mediatek86formations.vue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
-
+import android.util.Log;
 import com.example.mediatek86formations.R;
 import com.example.mediatek86formations.controleur.Controle;
 import com.example.mediatek86formations.modele.Formation;
@@ -21,6 +24,7 @@ public class FormationsActivity extends AppCompatActivity {
     private Controle controle;
     private Button btnFiltrer;
     private EditText txtFiltre;
+    private ArrayList<Formation> lesFormations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +40,16 @@ public class FormationsActivity extends AppCompatActivity {
         controle = Controle.getInstance();
         btnFiltrer = (Button) findViewById(R.id.btnFiltrer);
         txtFiltre = (EditText) findViewById(R.id.txtFiltre);
-        creerListe();
+
+        lesFormations = controle.getLesFormations();
+        creerListe(lesFormations);
+        ecouteFiltre();
     }
 
     /**
      * création de la liste adapter
      */
-    private void creerListe(){
-        ArrayList<Formation> lesFormations = controle.getLesFormations();
+    private void creerListe(ArrayList<Formation> lesFormations){
         if(lesFormations != null){
             Collections.sort(lesFormations, Collections.<Formation>reverseOrder());
             ListView listView = (ListView)findViewById(R.id.lstFormations);
@@ -52,4 +58,23 @@ public class FormationsActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Methode événementielle sur le clic du button filtrer. Permet de filtrer les formations sur le titre.
+     */
+    private void ecouteFiltre(){
+        txtFiltre = (EditText) findViewById(R.id.txtFiltre);
+        btnFiltrer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                ArrayList<Formation> lstFormationFiltre = new ArrayList<Formation>(controle.getLesFormationFiltre(txtFiltre.getText().toString()));
+                if(txtFiltre.getText().toString() != ""){
+                    creerListe(lstFormationFiltre);
+                }
+                else {
+                    controle.setLesFormations(controle.getLesFormations());
+                    creerListe(lesFormations);
+                }
+            }
+        });
+    }
 }
