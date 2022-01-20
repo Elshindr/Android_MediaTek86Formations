@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/main/res/layout/activity_favoris.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/main/res/layout/activity_formations.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/main/res/layout/activity_une_formation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/main/res/layout/activity_video.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/main/res/layout/layout_liste_formations.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>
