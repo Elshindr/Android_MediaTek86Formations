@@ -15,23 +15,35 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Classe d'acces à la base de données distante qui implémente AsyncResponse
+ */
 public class AccesDistant implements AsyncResponse {
 
-    private static final String SERVERADDR = "http://192.168.1.30/rest_mediatek86formations/";
-    private Controle controle;
+    /**
+     * Propriété contenant la chaine de l'adresse du serveur
+     */
+    private static final String SERVERADDR = "https://apimediatek.herokuapp.com/";
+    /**
+     * Propriété d'instance du controleur
+     */
+    private final Controle controle;
+    /**
+     * Propriété d'instance du contexte de l'activité
+     */
     private Context context;
 
     /**
-     * constructeur
+     * Constructeur public de la classe AccesDistant, valorise la propriété controle
      */
-    public AccesDistant(){
+    public AccesDistant() {
         controle = Controle.getInstance(context);
     }
 
     /**
-     * retour du serveur distant
-     * @param output
-     * @return
+     * Methode qui récupére la réponse du serveur distant et valorise la liste des formations vers le controleur
+     *
+     * @param output String
      */
     @Override
     public void processFinish(String output) {
@@ -41,8 +53,7 @@ public class AccesDistant implements AsyncResponse {
             String message = retour.getString("message");
             if (!message.equals("OK")) {
                 Log.d("erreur", "********* problème retour api rest :" + message);
-            }
-            else {
+            } else {
                 JSONArray infos = retour.getJSONArray("result");
                 ArrayList<Formation> lesFormations = new ArrayList<>();
                 for (int k = 0; k < infos.length(); k++) {
@@ -58,8 +69,7 @@ public class AccesDistant implements AsyncResponse {
                     Formation formation = new Formation(id, publishedAt, title, description, miniature, picture, videoId);
                     lesFormations.add(formation);
                 }
-                controle.setLesFormations(lesFormations);
-
+                controle.setLesFormationsAll(lesFormations);
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -67,16 +77,17 @@ public class AccesDistant implements AsyncResponse {
     }
 
     /**
-     * envoi de données vers le serveur distant
-     * @param operation
-     * @param lesDonneesJSON
+     * Methode qui envoi la requete de récupération des données vers le serveur distant
+     *
+     * @param operation      String
+     * @param lesDonneesJSON JSONObject
      */
-    public void envoi(String operation, JSONObject lesDonneesJSON){
+    public void envoi(String operation, JSONObject lesDonneesJSON) {
         AccesREST accesDonnees = new AccesREST();
         accesDonnees.delegate = this;
         String requesMethod = null;
-        switch (operation){
-            case "tous" : requesMethod="GET"; break;
+        if (operation.equals("tous")) {
+            requesMethod = "GET";
         }
         if (requesMethod != null) {
             accesDonnees.setRequestMethod(requesMethod);

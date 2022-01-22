@@ -1,19 +1,29 @@
 package com.example.mediatek86formations.vue;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mediatek86formations.R;
 import com.example.mediatek86formations.controleur.Controle;
 
+/**
+ * Classe d'activité principale hérite de AppCompatActivity
+ */
 public class MainActivity extends AppCompatActivity {
+    /**
+     * Propriété de l'instance du controleur
+     */
     private Controle controle;
+
+    /**
+     * Méthode qui gére la création de l'activité
+     *
+     * @param savedInstanceState Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,34 +32,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * initialisations
+     * Méthode qui initialise les composants graphiques de l'activité
      */
-    private void init(){
+    private void init() {
         creerMenu();
         controle = Controle.getInstance(this);
     }
 
     /**
-     * appelle les procédures événementielles pour gérer le menu
+     * Méthode qui appelle les procédures événementielles gérant le menu
      */
-    private void creerMenu(){
-        ecouteMenu((ImageButton)findViewById(R.id.btnFormations), FormationsActivity.class);
-        ecouteMenu((ImageButton)findViewById(R.id.btnFavoris), FavorisActivity.class);
+    private void creerMenu() {
+        ecouteMenu(findViewById(R.id.btnFormations), "all");
+        ecouteMenu(findViewById(R.id.btnFavoris), "favoris");
     }
 
     /**
-     * procédure événementielle sur le clic d'une image du menu
-     * @param btn
-     * @param classe
+     * Méthode événementielle sur le clic d'une image du menu
+     *
+     * @param btn   ImageButton
+     * @param choix String
      */
-    private void ecouteMenu(ImageButton btn, final Class classe){
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Activity activity = MainActivity.this;
-                Intent intent = new Intent(activity, classe);
-                activity.startActivity(intent);
-            }
+    private void ecouteMenu(ImageButton btn, String choix) {
+        btn.setOnClickListener(v -> {
+            Activity activity = MainActivity.this;
+            Intent intent = new Intent(activity, FormationsActivity.class);
+            activity.startActivity(intent);
+            controle.setChoix(choix);
         });
     }
 

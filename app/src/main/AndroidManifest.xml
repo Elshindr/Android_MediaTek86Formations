@@ -13,11 +13,6 @@
         android:theme="@style/Theme.MediaTek86Formations"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".vue.FavorisActivity"
-            android:exported="false"
-            android:parentActivityName=".vue.MainActivity"
-            />
-        <activity
             android:name=".vue.VideoActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"

@@ -3,149 +3,213 @@ package com.example.mediatek86formations.controleur;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
-import android.util.Log;
-import android.widget.TextView;
+import android.os.Looper;
 
 import com.example.mediatek86formations.modele.AccesDistant;
 import com.example.mediatek86formations.modele.AccesLocal;
 import com.example.mediatek86formations.modele.Formation;
-import com.example.mediatek86formations.vue.FavorisActivity;
-import com.example.mediatek86formations.vue.FormationsActivity;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.List;
 
+/**
+ * Classe du controleur
+ */
 public class Controle {
-
-    private static Controle instance = null ;
-    private static ArrayList<Formation> lesFormations = new ArrayList<>();
-
-    public static void setLesFormationsFavorites(ArrayList<Formation> lesFormationsFavorites) {
-        Controle.lesFormationsFavorites = lesFormationsFavorites;
-    }
-
-    private static ArrayList<Formation> lesFormationsFavorites = new ArrayList<>();
-    private static ArrayList<Integer> lesFavoris = new ArrayList<>();
-
-    public void setFormation(Formation formation) {
-        this.formation = formation;
-    }
-
-    private Formation formation ;
+    /**
+     * Propriété contenant une formation
+     */
+    private Formation formation;
+    /**
+     * Propriété contenant la liste de toutes les formations
+     */
+    private List<Formation> lesFormationsAll = new ArrayList<>();
+    /**
+     * Propriété contenant la liste des formations en cours d'utilisation
+     */
+    private List<Formation> lesFormationsChoix = new ArrayList<>();
+    /**
+     * Propriété contenant la liste des formations marquées comme favorites
+     */
+    private final List<Formation> lesFormationsFavorites = new ArrayList<>();
+    /**
+     * Propriété contenant la liste des id des formations marquées comme favorites
+     */
+    private static List<Integer> lesFavoris = new ArrayList<>();
+    /**
+     * Propriété d'acces à la base de données Locale
+     */
     private static AccesLocal accesLocal;
-    private static  AccesDistant accesDistant;
+    /**
+     * Propriété d'acces à la base de données distantes
+     */
+    @SuppressLint("StaticFieldLeak")
+    private static AccesDistant accesDistant;
+    /**
+     * Propriété d'instance du controleur
+     */
+    private static Controle instance = null;
+    /**
+     * Propriété contenant le choix de l'ativité : si toutes formation ou favoris
+     */
+    private String choix = "";
+
 
     /**
-     * constructeur privé
+     * constructeur privé de la Classe Controle
      */
-    private Controle(){
+    private Controle() {
         super();
     }
 
     /**
-     * récupération de l'instance unique de Controle
+     * Methode de récupération de l'instance unique du Controleur
+     *
      * @return instance
      */
-    public static final Controle getInstance(Context context){
-         if(Controle.instance == null) {
+    public static Controle getInstance(Context context) {
+        if (Controle.instance == null) {
             Controle.instance = new Controle();
 
-             Handler handler = new Handler();
-             handler.postDelayed(new Runnable() {
-                 public void run() {
-                     accesDistant = new AccesDistant();
-                     accesDistant.envoi("tous", null);
-                 }
-             }, 900);   //900 milliseconds
+            Handler handler = new Handler(Looper.getMainLooper());
+            handler.postDelayed(() -> {
+                accesDistant = new AccesDistant();
+                accesDistant.envoi("tous", null);
+            }, 1000); //1 seconde
 
             accesLocal = new AccesLocal(context);
             lesFavoris = accesLocal.recup();
-
         }
 
         return Controle.instance;
     }
 
-    public ArrayList<Formation> getLesFormationsFavorites(){
-        for(Formation uneFormation : lesFormations){
-            if(lesFavoris.contains(uneFormation.getId() )&& !lesFormationsFavorites.contains(uneFormation)){
-                lesFormationsFavorites.add(uneFormation);
-            }
-        }
-        return  lesFormationsFavorites;
-
-    }
-
-    public static ArrayList<Integer> getLesFavoris() {
+    /**
+     * Setter sur la liste lesFavorites
+     *
+     * @return lesFavoris List<Integer>
+     */
+    public static List<Integer> getLesFavoris() {
         return lesFavoris;
     }
 
+    /**
+     * Getter sur la liste lesFormationsFavorites
+     *
+     * @return lesFormationsFavorites List<Formation>
+     */
+    public List<Formation> getLesFormationsFavorites() {
+        for (Formation uneFormation : lesFormationsAll) {
+            if (lesFavoris.contains(uneFormation.getId()) && !lesFormationsFavorites.contains(uneFormation)) {
+                lesFormationsFavorites.add(uneFormation);
+            }
+        }
+        return lesFormationsFavorites;
+    }
 
-    public  void ajoutFavoris(Formation favFormation){
-
-        //Formation uneFormation = getLesFormations().get(favLigne-1);
-        Log.d("ajoutFavorisscontrolle", "Ligne :"+favFormation+"  titre :" + favFormation.getTitle() + " :: id:" + favFormation.getId());
-
+    /**
+     * Methode qui ajoute un objet Formation à la liste des formations favorites: lesFavoris
+     *
+     * @param favFormation Formation
+     */
+    public void ajoutFavoris(Formation favFormation) {
         if (!lesFavoris.contains(favFormation.getId())) {
             lesFavoris.add(favFormation.getId());
             accesLocal.ajoutfavoris(favFormation.getId());
             lesFormationsFavorites.add(favFormation);
-            Log.d("ajoutFavorisscontrolle"," :AJOUtEEEEEEEEEEEEEEEEEEEEEER: " + favFormation.getTitle()) ;
         }
-
     }
 
-
-    public void removeFav(Formation notfavFormation){
-        //Formation uneFormation = getLesFormations().get(notfavLigne-1);
-        Log.d("Supprscontrolle", "titre : " + notfavFormation.getTitle() + " 1!!" + notfavFormation.getId());
+    /**
+     * Methode qui supprime un objet Formation à la liste des formations favorites: lesFavoris
+     *
+     * @param notfavFormation Formation
+     */
+    public void removeFav(Formation notfavFormation) {
         accesLocal.removefavoris(notfavFormation.getId());
-        Log.d("Supprscontrolle", "titre : " + notfavFormation.getTitle() + " 2!!" + lesFavoris.toString());
-        lesFavoris.remove(lesFavoris.indexOf(notfavFormation.getId()));
+        lesFavoris.remove((Integer) notfavFormation.getId());
         lesFormationsFavorites.remove(notfavFormation);
-        Log.d("Supprscontrolle", "titre : " + notfavFormation.getTitle() + " 3!!" + lesFavoris.toString());
     }
-
-    public void setLesFavoris(ArrayList<Integer> lesFavoris) { this.lesFavoris = lesFavoris;}
-
 
 
     /**
-     * retourne les formations dont le titre contient le filtre
-     * @param filtre
-     * @return
+     * Methode qui retourne la liste des formations dont le titre contient le filtre
+     *
+     * @param filtre  String
+     * @param context Context
+     * @return lstFiltre List<Formation>
      */
-    public ArrayList<Formation> getLesFormationFiltre(String filtre, Context context){
-        ArrayList<Formation> lstFormations = null;
-        if(context instanceof FavorisActivity){
-            Log.d("FormationFiltre", "titre : " + " 3!!" + lesFavoris.toString());
-
-            lstFormations = lesFormationsFavorites;
-        }
-        else if(context instanceof FormationsActivity){
-            Log.d("gFormationFiltre", "titre : " +  " 3!!" + lesFavoris.toString());
-
-            lstFormations = lesFormations;
-        }
-        ArrayList<Formation> lstFiltre = new ArrayList<>();
-        for(Formation uneFormation : lstFormations){
-            if(uneFormation.getTitle().toUpperCase().contains(filtre.toUpperCase())){
-                lstFiltre.add(uneFormation);
+    public List<Formation> getLesFormationFiltre(String filtre, Context context) {
+        List<Formation> lstFiltre = new ArrayList<>();
+        if (lesFormationsChoix != null) {
+            for (Formation uneFormation : lesFormationsChoix) {
+                if (uneFormation.getTitle().toUpperCase().contains(filtre.toUpperCase())) {
+                    lstFiltre.add(uneFormation);
+                }
             }
         }
         return lstFiltre;
     }
 
+    /**
+     * Getter sur l'objet d'une formation
+     *
+     * @return formation Formation
+     */
     public Formation getFormation() {
         return formation;
     }
 
-
-
-    public ArrayList<Formation> getLesFormations() {
-        return lesFormations;
+    /**
+     * Setter sur l'objet Formation
+     *
+     * @param formation Formation
+     */
+    public void setFormation(Formation formation) {
+        this.formation = formation;
     }
 
-    public void setLesFormations(ArrayList<Formation> lesFormations) { this.lesFormations = lesFormations;}
+    /**
+     * Getter sur l'objet lesFormationsAll
+     *
+     * @return lesFormations List<Formation>
+     */
+    public List<Formation> getLesFormationsAll() {
+        return lesFormationsAll;
+    }
+
+
+    /**
+     * Setter sur la liste lesFormationsAll
+     *
+     * @param lesFormationsAll List<Formation>
+     */
+    public void setLesFormationsAll(List<Formation> lesFormationsAll) {
+        this.lesFormationsAll = lesFormationsAll;
+    }
+
+
+    /**
+     * Setter sur le choix de l'activité
+     *
+     * @param choix String
+     */
+    public void setChoix(String choix) {
+        this.choix = choix;
+    }
+
+    /**
+     * Getter sur la liste des formations choisies
+     */
+    public List<Formation> getLesFormationsChoix() {
+        if (choix.equals("favoris")) {
+            lesFormationsChoix = getLesFormationsFavorites();
+        }
+        if (choix.equals("all")) {
+            lesFormationsChoix = getLesFormationsAll();
+        }
+        return lesFormationsChoix;
+    }
 
 }
+
