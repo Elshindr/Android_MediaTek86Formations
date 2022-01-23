@@ -23,7 +23,7 @@ public class AccesDistant implements AsyncResponse {
     /**
      * Propriété contenant la chaine de l'adresse du serveur
      */
-    private static final String SERVERADDR = "https://apimediatek.herokuapp.com/";
+    private static final String SERVERADDR = "https://api-mediatekformations.herokuapp.com/";
     /**
      * Propriété d'instance du controleur
      */
