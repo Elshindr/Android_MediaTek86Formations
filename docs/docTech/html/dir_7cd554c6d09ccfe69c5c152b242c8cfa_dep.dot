@@ -1,0 +1,18 @@
+digraph "C:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/main/java/com/example/mediatek86formations"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_7c134c4d58222aeb83bdb381aabad6d3 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="example", fontname="Helvetica", fontsize="10", URL="dir_7c134c4d58222aeb83bdb381aabad6d3.html"]
+  subgraph clusterdir_7cd554c6d09ccfe69c5c152b242c8cfa {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_7cd554c6d09ccfe69c5c152b242c8cfa.html"]
+    dir_7cd554c6d09ccfe69c5c152b242c8cfa [shape=plaintext, label="mediatek86formations"];
+  dir_55da80b6acb7cea9b2b7f8e6b928d93a [shape=box, label="controleur", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_55da80b6acb7cea9b2b7f8e6b928d93a.html"];
+  dir_f1e71dd249c8b697a35f6b3a1b64c175 [shape=box, label="modele", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_f1e71dd249c8b697a35f6b3a1b64c175.html"];
+  dir_866240eccbce361c2de3729d9ef58a4b [shape=box, label="outils", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_866240eccbce361c2de3729d9ef58a4b.html"];
+  dir_10886aff2aaacfcd74710614ebc29d5a [shape=box, label="vue", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_10886aff2aaacfcd74710614ebc29d5a.html"];
+  }
+  }
+}

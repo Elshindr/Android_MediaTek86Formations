@@ -1,0 +1,15 @@
+digraph "C:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/test/java/com"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_6e6fd3f0d6c3900b7f8779aae099d53d {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="java", fontname="Helvetica", fontsize="10", URL="dir_6e6fd3f0d6c3900b7f8779aae099d53d.html"]
+  subgraph clusterdir_8d4aec5a7e4aa67a8ec08c2ec0fd612f {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_8d4aec5a7e4aa67a8ec08c2ec0fd612f.html"]
+    dir_8d4aec5a7e4aa67a8ec08c2ec0fd612f [shape=plaintext, label="com"];
+  dir_2b1d037be7f3ea807fe914e2fa391e78 [shape=box, label="example", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_2b1d037be7f3ea807fe914e2fa391e78.html"];
+  }
+  }
+}

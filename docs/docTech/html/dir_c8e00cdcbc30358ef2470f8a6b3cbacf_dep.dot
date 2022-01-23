@@ -1,0 +1,11 @@
+digraph "C:/Users/Ydrani/AndroidStudioProjects/android_mediatek/app/src/test/java/com/example/mediatek86formations"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_2b1d037be7f3ea807fe914e2fa391e78 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="example", fontname="Helvetica", fontsize="10", URL="dir_2b1d037be7f3ea807fe914e2fa391e78.html"]
+  dir_c8e00cdcbc30358ef2470f8a6b3cbacf [shape=box, label="mediatek86formations", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_c8e00cdcbc30358ef2470f8a6b3cbacf.html"];
+  }
+}
