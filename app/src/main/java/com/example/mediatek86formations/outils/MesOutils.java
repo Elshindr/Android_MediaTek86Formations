@@ -18,33 +18,23 @@ public interface MesOutils {
     /**
      * Méthode qui reçoit une date au format String et la convertit au format Date
      *
-     * @param uneDate         String
+     * @param strDate         String
      * @param expectedPattern pour formater la date
      * @return date convertie Date
      */
-    static Date convertStringToDate(String uneDate, String expectedPattern) {
+    static Date convertStringToDate(String strDate, String expectedPattern) {
         SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern);
         try {
-            return formatter.parse(uneDate);
+            return formatter.parse(strDate);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    /**
-     * Methode qui reçoit une date au format String et la convertit au format Date avec pattern précis
-     *
-     * @param uneDate au format String
-     * @return date convertie au format Date
-     */
-    static Date convertStringToDate(String uneDate) {
-        String expectedPattern = "EEE MMM dd hh:mm:ss 'GMT+00:00' yyyy";
-        return convertStringToDate(uneDate, expectedPattern);
-    }
 
     /**
-     * reçoit une date au format Date et la convertit au format String
+     * Methode qui reçoit une date au format Date et la convertit au format String
      *
      * @param uneDate au format Date
      * @return date convertie au format String
@@ -55,7 +45,7 @@ public interface MesOutils {
     }
 
     /**
-     * Charge une imagge à partir d'une url
+     * Methode qui charge une image à partir d'une url
      *
      * @param img ImageButton
      * @param url String

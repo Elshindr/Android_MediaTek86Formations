@@ -15,7 +15,7 @@ import com.example.mediatek86formations.controleur.Controle;
  */
 public class MainActivity extends AppCompatActivity {
     /**
-     * Propriété de l'instance du controleur
+     * Propriété d'instance du controleur
      */
     private Controle controle;
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             Activity activity = MainActivity.this;
             Intent intent = new Intent(activity, FormationsActivity.class);
             activity.startActivity(intent);
-            controle.setChoix(choix);
+            Controle.setChoix(choix);
         });
     }
 

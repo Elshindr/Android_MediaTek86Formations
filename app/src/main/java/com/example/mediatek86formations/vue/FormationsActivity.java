@@ -64,7 +64,7 @@ public class FormationsActivity extends AppCompatActivity {
         controle = Controle.getInstance(this);
 
         lesFormationsChoix = controle.getLesFormationsChoix();
-        lesFavoris = controle.getLesFavoris();
+        lesFavoris = Controle.getLesFavoris();
         creerListe(lesFormationsChoix);
         ecouteFiltre();
     }
@@ -90,7 +90,7 @@ public class FormationsActivity extends AppCompatActivity {
         txtFiltre = findViewById(R.id.txtFiltre);
         btnFiltrer.setOnClickListener(v -> {
             if (!txtFiltre.getText().toString().equals("")) {
-                List<Formation> lstFormationFiltre = new ArrayList<>(controle.getLesFormationFiltre(txtFiltre.getText().toString(), FormationsActivity.this));
+                List<Formation> lstFormationFiltre = new ArrayList<>(controle.getLesFormationFiltre(txtFiltre.getText().toString()));
                 creerListe(lstFormationFiltre);
             } else {
                 lesFormationsChoix = controle.getLesFormationsChoix();

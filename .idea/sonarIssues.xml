@@ -23,6 +23,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../Coach/app/src/test/java/com/example/coach/outils/MesOutilsTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../Testsqite/app/src/main/java/com/example/testsqite/AccesLocal.java">
           <value>
             <set />
@@ -93,7 +98,12 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+        <entry key="$PROJECT_DIR$/app/src/androidTest/java/com/example/mediatek86formations/outils/MesOutilsTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/androidTest/java/com/example/mediatek86formations/vue/FormationsActivityTest.java">
           <value>
             <set />
           </value>
@@ -123,27 +133,12 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/outils/AccesREST.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/outils/AsyncResponse.java">
-          <value>
-            <set />
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/outils/BackgroundTask.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/outils/MesOutils.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/outils/MySQLiteOpenHelper.java">
           <value>
             <set />
           </value>
@@ -158,11 +153,6 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/vue/FormationListAdapter.java">
-          <value>
-            <set />
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/vue/FormationsActivity.java">
           <value>
             <set />
@@ -173,17 +163,17 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/vue/UneFormationActivity.java">
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/layout_liste_formations.xml">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/app/src/main/java/com/example/mediatek86formations/vue/VideoActivity.java">
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/example/mediatek86formations/modele/FormationTest.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_favoris.xml">
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/example/mediatek86formations/outils/MesOutilsTest.java">
           <value>
             <set />
           </value>

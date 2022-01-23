@@ -49,10 +49,12 @@ public class Controle {
      * Propriété d'instance du controleur
      */
     private static Controle instance = null;
+
+
     /**
      * Propriété contenant le choix de l'ativité : si toutes formation ou favoris
      */
-    private String choix = "";
+    private static String choix = "";
 
 
     /**
@@ -135,11 +137,10 @@ public class Controle {
     /**
      * Methode qui retourne la liste des formations dont le titre contient le filtre
      *
-     * @param filtre  String
-     * @param context Context
+     * @param filtre String
      * @return lstFiltre List<Formation>
      */
-    public List<Formation> getLesFormationFiltre(String filtre, Context context) {
+    public List<Formation> getLesFormationFiltre(String filtre) {
         List<Formation> lstFiltre = new ArrayList<>();
         if (lesFormationsChoix != null) {
             for (Formation uneFormation : lesFormationsChoix) {
@@ -194,9 +195,10 @@ public class Controle {
      *
      * @param choix String
      */
-    public void setChoix(String choix) {
-        this.choix = choix;
+    public static void setChoix(String choix) {
+        Controle.choix = choix;
     }
+
 
     /**
      * Getter sur la liste des formations choisies

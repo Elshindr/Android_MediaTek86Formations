@@ -56,6 +56,7 @@ public class Formation implements Comparable<Formation> {
         this.miniature = miniature;
         this.picture = picture;
         this.videoId = videoId;
+        this.getPublishedAtToString();
     }
 
     /**
@@ -103,14 +104,6 @@ public class Formation implements Comparable<Formation> {
         return description;
     }
 
-    /**
-     * Getter sur la propriété miniature de Formation
-     *
-     * @return miniature String
-     */
-    public String getMiniature() {
-        return miniature;
-    }
 
     /**
      * Getter sur la propriété picture de Formation

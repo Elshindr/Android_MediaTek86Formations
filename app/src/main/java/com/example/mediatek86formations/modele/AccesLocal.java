@@ -66,15 +66,13 @@ public class AccesLocal {
         Cursor curseur = bd.rawQuery(req, null);
         curseur.moveToFirst();
 
-        int i = 0;
         while (!curseur.isAfterLast()) {
             Integer idformation = curseur.getInt(0);
 
             favoris.add(idformation);
-            i++;
             curseur.moveToNext();
         }
-        Log.d("recupfavoris", "id: " + favoris.toString());
+        Log.d("recupfavoris", "id favoris: " + favoris.toString());
 
         curseur.close();
         return favoris;
