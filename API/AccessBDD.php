@@ -5,24 +5,10 @@ include_once("ConnexionPDO.php");
  * Classe de construction des requêtes SQL à envoyer à la BDD
  */
 class AccessBDD {
-	
-	/*public	$url = getenv('JAWSDB_URL');
-	public	$dbparts = parse_url($url);
-	public	$serveur = $dbparts['host'];
-	public	$login = $dbparts['user'];
-	public	$mdp = $dbparts['pass'];
-	public	$bd = ltrim($dbparts['path'],'/');*/
-		
-	
-	/*
-	public $login="lnlo9hi8ujvyua0o";
-	public $mdp="b6294290lmav3k1e";
-	public $bd="i58s5i3349p4eyxi";
-	public $serveur="esilxl0nthgloe1y.chr7pe7iynqr.eu-west-1.rds.amazonaws.com";*/
 
-	public $login="babe9a9d531859";
-	public $mdp="d1ba6797";
-	public $bd="heroku_c237f484e9b77e9";
+	public $login="b723e57fc203e0";
+	public $mdp="5dd47000";
+	public $bd="heroku_677e15f58da576c";
 	public $serveur="eu-cdbr-west-02.cleardb.net";
 	public $port="3306";
 	public $conn = null;
