@@ -31,6 +31,7 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@color/white"
+                android:contentDescription="Bouton des formations"
                 android:scaleType="centerInside"
                 android:src="@drawable/menu1" />
         </LinearLayout>
@@ -56,6 +57,7 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:background="@color/white"
+                android:contentDescription="Bouton des favoris"
                 android:scaleType="centerInside"
                 android:src="@drawable/menu2" />
         </LinearLayout>

@@ -16,32 +16,32 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * Classe d'acces à la base de données distante qui implémente AsyncResponse
+ * Classe d'acces à la base de données distante qui implémente AsyncResponse.
  */
 public class AccesDistant implements AsyncResponse {
 
     /**
-     * Propriété contenant la chaine de l'adresse du serveur
+     * Propriété contenant la chaine de l'adresse du serveur.
      */
     private static final String SERVERADDR = "https://api-mediatekformations.herokuapp.com/";
     /**
-     * Propriété d'instance du controleur
+     * Propriété d'instance du controleur.
      */
     private final Controle controle;
     /**
-     * Propriété d'instance du contexte de l'activité
+     * Propriété d'instance du contexte de l'activité.
      */
     private Context context;
 
     /**
-     * Constructeur public de la classe AccesDistant, valorise la propriété controle
+     * Constructeur de la classe AccesDistant, valorise la propriété controle.
      */
     public AccesDistant() {
         controle = Controle.getInstance(context);
     }
 
     /**
-     * Methode qui récupére la réponse du serveur distant et valorise la liste des formations vers le controleur
+     * Methode qui récupére la réponse du serveur distant et valorise la liste des formations vers le controleur.
      *
      * @param output String
      */
@@ -52,15 +52,14 @@ public class AccesDistant implements AsyncResponse {
             JSONObject retour = new JSONObject(output);
             String message = retour.getString("message");
             if (!message.equals("OK")) {
-                Log.d("erreur", "********* problème retour api rest :" + message);
+                Log.d("erreur", "********* retour api rest :" + message);
             } else {
                 JSONArray infos = retour.getJSONArray("result");
                 ArrayList<Formation> lesFormations = new ArrayList<>();
                 for (int k = 0; k < infos.length(); k++) {
                     JSONObject info = new JSONObject(infos.get(k).toString());
                     int id = Integer.parseInt(info.getString("id"));
-                    Date publishedAt = MesOutils.convertStringToDate(info.getString("published_at"),
-                            "yyyy-MM-dd hh:mm:ss");
+                    Date publishedAt = MesOutils.convertStringToDate(info.getString("published_at"), "yyyy-MM-dd hh:mm:ss");
                     String title = info.getString("title");
                     String description = info.getString("description");
                     String miniature = info.getString("miniature");
@@ -77,7 +76,7 @@ public class AccesDistant implements AsyncResponse {
     }
 
     /**
-     * Methode qui envoi la requete de récupération des données vers le serveur distant
+     * Methode qui envoi la requete de récupération des données vers le serveur distant.
      *
      * @param operation      String
      * @param lesDonneesJSON JSONObject

@@ -1,6 +1,9 @@
 package com.example.mediatek86formations.vue;
 
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -18,7 +21,7 @@ public class VideoActivity extends AppCompatActivity {
     /**
      * Propriété contenant l'objet graphique affichant la vidéo
      */
-    WebView wbvYoutube;
+    private WebView wbvYoutube;
 
     /**
      * Methode appellée à la création de l'activité et l'initialise
@@ -35,15 +38,28 @@ public class VideoActivity extends AppCompatActivity {
     /**
      * Methode permettant d'afficher la vidéo
      */
+    @SuppressLint("SetJavaScriptEnabled")
     private void init() {
         Controle controle = Controle.getInstance(this);
         Formation formation = controle.getFormation();
         if (formation != null) {
             wbvYoutube = findViewById(R.id.wbvYoutube);
+            Log.d("init", "actiiiiiiiiiiiiiiiiiiiiiiive");
             wbvYoutube.getSettings().setJavaScriptEnabled(true);
             wbvYoutube.setWebViewClient(new WebViewClient());
             wbvYoutube.loadUrl("https://www.youtube.com/embed/" + formation.getVideoId());
         }
     }
 
+    /**
+     * Methode appellée à la fermeture de l'activité
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (wbvYoutube.getSettings().getJavaScriptEnabled()) {
+            wbvYoutube.getSettings().setJavaScriptEnabled(false);
+            Log.d("onDestroy", "******* Fermeture js");
+        }
+    }
 }

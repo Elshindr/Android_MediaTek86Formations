@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.mediatek86formations.R;
 import com.example.mediatek86formations.controleur.Controle;
 import com.example.mediatek86formations.modele.Formation;
@@ -53,6 +51,7 @@ public class UneFormationActivity extends AppCompatActivity {
             MesOutils.loadMapPreview(btnPicture, formation.getPicture());
         }
         ecouteBtnPicture();
+        //VideoActivity.closeJS();
     }
 
     /**

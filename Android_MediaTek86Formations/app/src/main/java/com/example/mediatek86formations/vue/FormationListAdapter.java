@@ -16,32 +16,32 @@ import com.example.mediatek86formations.modele.Formation;
 import java.util.List;
 
 /**
- * Classe visuelle de gestion des listes adaptables hérite de BaseAdapter
+ * Classe visuelle de gestion des listes adaptables hérite de BaseAdapter.
  */
 public class FormationListAdapter extends BaseAdapter {
     /**
-     * Propriété contenant la liste des formations
+     * Propriété contenant la liste des formations.
      */
     private final List<Formation> lesFormations;
     /**
-     * Propriété contenant l'instance du layout graphique
+     * Propriété contenant l'instance du layout graphique.
      */
     private final LayoutInflater inflater;
     /**
-     * Propriété contenant l'instance du controleur'
+     * Propriété contenant l'instance du controleur.
      */
     private final Controle controle;
     /**
-     * Propriété contenant l'instance du contexte'
+     * Propriété contenant l'instance du contexte.
      */
     private final Context context;
     /**
-     * Propriété contenant la liste des id des formations
+     * Propriété contenant la liste des id des formations.
      */
     private List<Integer> lesFavoris;
 
     /**
-     * Constructeur de la liste graphique adaptable. Valorise l'ensemble de ses propriétés privées
+     * Constructeur de la liste graphique adaptable. Valorise l'ensemble de ses propriétés privées.
      *
      * @param lesFormations List<Formation>
      * @param lesFavoris    List<Integer>
@@ -56,7 +56,7 @@ public class FormationListAdapter extends BaseAdapter {
     }
 
     /**
-     * Getter sur la taille de la liste lesFormations
+     * Getter sur la taille de la liste lesFormations.
      *
      * @return nombre de formations
      */
@@ -66,7 +66,7 @@ public class FormationListAdapter extends BaseAdapter {
     }
 
     /**
-     * Getter sur la formation à la position i donnée
+     * Getter sur la formation à la position i donnée.
      *
      * @param i position de l'item formation
      * @return la formation à cette position
@@ -77,7 +77,7 @@ public class FormationListAdapter extends BaseAdapter {
     }
 
     /**
-     * Getter sur l'id de la formation fournie
+     * Getter sur l'id de la formation fournie.
      *
      * @param i position de l'item
      * @return id de la formation à cette position
@@ -88,7 +88,7 @@ public class FormationListAdapter extends BaseAdapter {
     }
 
     /**
-     * Methode de construction des lignes de la liste. Appellée pour chaque item
+     * Methode de construction des lignes de la liste. Appellée pour chaque item.
      *
      * @param i         int
      * @param view      View
@@ -135,7 +135,7 @@ public class FormationListAdapter extends BaseAdapter {
     }
 
     /**
-     * Methode évenementielle qui permet de gérer si le bouton favoris d'une formation est marquée comme favoris ou non
+     * Methode évenementielle qui permet de gérer si le bouton favoris d'une formation est marquée comme favoris ou non.
      *
      * @param id int
      * @return int Ressource
@@ -149,7 +149,7 @@ public class FormationListAdapter extends BaseAdapter {
     }
 
     /**
-     * Methode évenementielle qui ouvre la page du détail de la formation
+     * Methode évenementielle qui ouvre la page du détail de la formation.
      *
      * @param v View
      */
@@ -161,19 +161,19 @@ public class FormationListAdapter extends BaseAdapter {
     }
 
     /**
-     * Classe privée interne possédant les propriétés des lignes de la liste adapter
+     * Classe privée interne possédant les propriétés des lignes de la liste adapter.
      */
     private static class ViewProperties {
         /**
-         * Propriété graphique représentant le bouton des favoris
+         * Propriété graphique représentant le bouton des favoris.
          */
         ImageButton btnListFavori;
         /**
-         * Propriété graphique de la zone de text de la date de publication
+         * Propriété graphique de la zone de text de la date de publication.
          */
         TextView txtListPublishedAt;
         /**
-         * Propriété graphique de la zone de texte du titre
+         * Propriété graphique de la zone de texte du titre.
          */
         TextView txtListeTitle;
     }

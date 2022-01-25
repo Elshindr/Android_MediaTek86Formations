@@ -13,60 +13,60 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Classe du controleur
+ * Classe du controleur.
  */
 public class Controle {
     /**
-     * Propriété contenant une formation
+     * Propriété contenant une formation.
      */
     private Formation formation;
     /**
-     * Propriété contenant la liste de toutes les formations
+     * Propriété contenant la liste de toutes les formations.
      */
     private List<Formation> lesFormationsAll = new ArrayList<>();
     /**
-     * Propriété contenant la liste des formations en cours d'utilisation
+     * Propriété contenant la liste des formations en cours d'utilisation.
      */
     private List<Formation> lesFormationsChoix = new ArrayList<>();
     /**
-     * Propriété contenant la liste des formations marquées comme favorites
+     * Propriété contenant la liste des formations marquées comme favorites.
      */
     private final List<Formation> lesFormationsFavorites = new ArrayList<>();
     /**
-     * Propriété contenant la liste des id des formations marquées comme favorites
+     * Propriété contenant la liste des id des formations favorites.
      */
     private static List<Integer> lesFavoris = new ArrayList<>();
     /**
-     * Propriété d'acces à la base de données Locale
+     * Propriété d'acces à la base de données Locale.
      */
     private static AccesLocal accesLocal;
     /**
-     * Propriété d'acces à la base de données distantes
+     * Propriété d'acces à la base de données distantes.
      */
     @SuppressLint("StaticFieldLeak")
     private static AccesDistant accesDistant;
     /**
-     * Propriété d'instance du controleur
+     * Propriété d'instance du controleur.
      */
     private static Controle instance = null;
 
 
     /**
-     * Propriété contenant le choix de l'ativité : si toutes formation ou favoris
+     * Propriété contenant le choix de l'activité
      */
     private static String choix = "";
 
 
     /**
-     * constructeur privé de la Classe Controle
+     * Constructeur privé de la Classe Controle.
      */
     private Controle() {
         super();
     }
 
     /**
-     * Methode de récupération de l'instance unique du Controleur
-     *
+     * Methode de récupération de l'instance unique du Controleur.
+     * @param context Context
      * @return instance
      */
     public static Controle getInstance(Context context) {
@@ -87,7 +87,7 @@ public class Controle {
     }
 
     /**
-     * Setter sur la liste lesFavorites
+     * Setter sur la liste lesFavorites.
      *
      * @return lesFavoris List<Integer>
      */
@@ -96,7 +96,7 @@ public class Controle {
     }
 
     /**
-     * Getter sur la liste lesFormationsFavorites
+     * Getter sur la liste lesFormationsFavorites.
      *
      * @return lesFormationsFavorites List<Formation>
      */
@@ -110,7 +110,7 @@ public class Controle {
     }
 
     /**
-     * Methode qui ajoute un objet Formation à la liste des formations favorites: lesFavoris
+     * Methode qui ajoute un objet Formation à la liste lesFavoris.
      *
      * @param favFormation Formation
      */
@@ -123,7 +123,7 @@ public class Controle {
     }
 
     /**
-     * Methode qui supprime un objet Formation à la liste des formations favorites: lesFavoris
+     * Methode qui supprime un objet Formation à la liste lesFavoris.
      *
      * @param notfavFormation Formation
      */
@@ -135,7 +135,7 @@ public class Controle {
 
 
     /**
-     * Methode qui retourne la liste des formations dont le titre contient le filtre
+     * Methode qui retourne la liste des formations avec le filtre.
      *
      * @param filtre String
      * @return lstFiltre List<Formation>
@@ -153,7 +153,7 @@ public class Controle {
     }
 
     /**
-     * Getter sur l'objet d'une formation
+     * Getter sur l'objet d'une formation.
      *
      * @return formation Formation
      */
@@ -162,7 +162,7 @@ public class Controle {
     }
 
     /**
-     * Setter sur l'objet Formation
+     * Setter sur l'objet Formation.
      *
      * @param formation Formation
      */
@@ -171,7 +171,7 @@ public class Controle {
     }
 
     /**
-     * Getter sur l'objet lesFormationsAll
+     * Getter sur l'objet lesFormationsAll.
      *
      * @return lesFormations List<Formation>
      */
@@ -181,7 +181,7 @@ public class Controle {
 
 
     /**
-     * Setter sur la liste lesFormationsAll
+     * Setter sur la liste lesFormationsAll.
      *
      * @param lesFormationsAll List<Formation>
      */
@@ -191,7 +191,7 @@ public class Controle {
 
 
     /**
-     * Setter sur le choix de l'activité
+     * Setter sur le choix de l'activité.
      *
      * @param choix String
      */
@@ -201,7 +201,8 @@ public class Controle {
 
 
     /**
-     * Getter sur la liste des formations choisies
+     * Getter sur la liste des formations choisies.
+     * @return lesFormationsChoix List<Formation>
      */
     public List<Formation> getLesFormationsChoix() {
         if (choix.equals("favoris")) {

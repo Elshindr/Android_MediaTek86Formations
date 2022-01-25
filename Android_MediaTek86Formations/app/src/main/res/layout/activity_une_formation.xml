@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:background="@color/white"
+            android:contentDescription="Bouton image vignette de la video"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/sddefault" />
 

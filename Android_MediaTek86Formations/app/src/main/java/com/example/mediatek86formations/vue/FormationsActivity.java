@@ -16,34 +16,34 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Classe visuelle de l'activité gérant l'affichage des formations qui hérite de AppCompatActivity
+ * Classe visuelle de l'activité gérant l'affichage des formations qui hérite de AppCompatActivity.
  */
 public class FormationsActivity extends AppCompatActivity {
 
     /**
-     * Propriété de l'instance du controleur
+     * Propriété de l'instance du controleur.
      */
     private Controle controle;
     /**
-     * Propriété graphique du bouton Filtrer
+     * Propriété graphique du bouton Filtrer.
      */
     private Button btnFiltrer;
     /**
-     * Propriété graphique de la zone de texte du filtre
+     * Propriété graphique de la zone de texte du filtre.
      */
     private EditText txtFiltre;
 
     /**
-     * Propriété contenant la liste des formations
+     * Propriété contenant la liste des formations.
      */
     private List<Formation> lesFormationsChoix;
     /**
-     * Propriété contenant la liste des id des formations favorites
+     * Propriété contenant la liste des id des formations favorites.
      */
     private List<Integer> lesFavoris;
 
     /**
-     * Methode générant l'activité de formations
+     * Methode générant l'activité de formations.
      *
      * @param savedInstanceState Bundle
      */
@@ -55,7 +55,7 @@ public class FormationsActivity extends AppCompatActivity {
     }
 
     /**
-     * Methode qui initialise les objets graphiques et récupére l'instance du controleeur
+     * Methode qui initialise les objets graphiques et récupére l'instance du controleur.
      */
     private void init() {
         btnFiltrer = findViewById(R.id.btnFiltrer);
@@ -70,7 +70,7 @@ public class FormationsActivity extends AppCompatActivity {
     }
 
     /**
-     * Méthode de création de la liste adapter
+     * Méthode de création de la liste adapter.
      *
      * @param lesFormations List<Formation>
      */
@@ -84,7 +84,7 @@ public class FormationsActivity extends AppCompatActivity {
     }
 
     /**
-     * Methode événementielle sur le clic du button filtrer. Permet de filtrer les formations sur le titre
+     * Methode événementielle sur le clic du button filtrer. Permet de filtrer les formations sur le titre.
      */
     private void ecouteFiltre() {
         txtFiltre = findViewById(R.id.txtFiltre);

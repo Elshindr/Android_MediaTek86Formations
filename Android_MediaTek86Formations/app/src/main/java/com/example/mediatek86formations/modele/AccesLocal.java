@@ -12,11 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Classe d'acces à la base de données locale
+ * Classe d'acces à la base de données locale.
  */
 public class AccesLocal {
     /**
-     * Propriété contenant la chaine du nom de la base de donnée locale
+     * Propriété contenant la chaine du nom de la base de donnée locale.
      */
     private static final String NOMBASE = "bdMediatek.sqlite";
     /**
@@ -24,7 +24,7 @@ public class AccesLocal {
      */
     private static final Integer VERSIONBASE = 1;
     /**
-     * Propriété contenant l'instance de la classe technique gestion de la base de donnée SQLite
+     * Propriété contenant l'instance de la classe technique gestion de la base de donnée SQLite.
      */
     private final MySQLiteOpenHelper accesBD;
     /**
@@ -33,7 +33,7 @@ public class AccesLocal {
     private SQLiteDatabase bd;
 
     /**
-     * Constructeur public qui valorise la propriété d'accès à la base de donnée locale
+     * Constructeur public qui valorise la propriété d'accès à la base de donnée locale.
      *
      * @param context Context
      */
@@ -42,7 +42,7 @@ public class AccesLocal {
     }
 
     /**
-     * Methode qui ajoute dans la base de donnée locale la valeur du paramétre fourni
+     * Methode qui ajoute dans la base de donnée locale la valeur du paramétre fourni.
      *
      * @param id int
      */
@@ -55,7 +55,7 @@ public class AccesLocal {
     }
 
     /**
-     * Methode qui retourne la liste des id contenu dans la base de données locale
+     * Methode qui retourne la liste des id contenu dans la base de données locale.
      *
      * @return favoris List<Integer>
      */
@@ -79,7 +79,7 @@ public class AccesLocal {
     }
 
     /**
-     * Methode qui supprime l'id fourni de la base de donnée locale
+     * Methode qui supprime l'id fourni de la base de donnée locale.
      *
      * @param notFavId int
      */

@@ -15,11 +15,6 @@ import com.example.mediatek86formations.controleur.Controle;
  */
 public class MainActivity extends AppCompatActivity {
     /**
-     * Propriété d'instance du controleur
-     */
-    private Controle controle;
-
-    /**
      * Méthode qui gére la création de l'activité
      *
      * @param savedInstanceState Bundle
@@ -36,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void init() {
         creerMenu();
-        controle = Controle.getInstance(this);
+        Controle.getInstance(this);
     }
 
     /**
