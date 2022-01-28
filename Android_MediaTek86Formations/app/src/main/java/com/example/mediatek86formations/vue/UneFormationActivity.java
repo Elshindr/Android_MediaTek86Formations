@@ -51,7 +51,6 @@ public class UneFormationActivity extends AppCompatActivity {
             MesOutils.loadMapPreview(btnPicture, formation.getPicture());
         }
         ecouteBtnPicture();
-        //VideoActivity.closeJS();
     }
 
     /**

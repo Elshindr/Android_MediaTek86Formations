@@ -218,7 +218,7 @@ public class Controle {
      *
      * @param lesFormationsAll List<Formation>
      */
-    public void setLesFormationsAll(List<Formation> lesFormationsAll) {
+    public static void setLesFormationsAll(List<Formation> lesFormationsAll) {
         Controle.lesFormationsAll = lesFormationsAll;
     }
 
