@@ -11,9 +11,10 @@ import com.example.mediatek86formations.R;
 import com.example.mediatek86formations.controleur.Controle;
 
 /**
- * Classe d'activité principale hérite de AppCompatActivity
+ * Classe d'activité principale hérite de AppCompatActivity.
  */
 public class MainActivity extends AppCompatActivity {
+
     /**
      * Méthode qui gére la création de l'activité
      *
@@ -27,23 +28,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Méthode qui initialise les composants graphiques de l'activité
+     * Méthode qui initialise les composants graphiques de l'activité.
      */
     private void init() {
-        creerMenu();
         Controle.getInstance(this);
+        creerMenu();
     }
 
     /**
-     * Méthode qui appelle les procédures événementielles gérant le menu
+     * Méthode qui appelle les procédures événementielles gérant le menu.
      */
     private void creerMenu() {
+
         ecouteMenu(findViewById(R.id.btnFormations), "all");
         ecouteMenu(findViewById(R.id.btnFavoris), "favoris");
     }
 
     /**
-     * Méthode événementielle sur le clic d'une image du menu
+     * Méthode événementielle sur le clic d'une image du menu.
      *
      * @param btn   ImageButton
      * @param choix String
@@ -56,5 +58,4 @@ public class MainActivity extends AppCompatActivity {
             Controle.setChoix(choix);
         });
     }
-
 }

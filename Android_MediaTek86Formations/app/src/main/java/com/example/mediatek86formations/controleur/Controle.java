@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import com.example.mediatek86formations.modele.AccesDistant;
 import com.example.mediatek86formations.modele.AccesLocal;
@@ -17,25 +18,28 @@ import java.util.List;
  */
 public class Controle {
     /**
-     * Propriété contenant une formation.
-     */
-    private Formation formation;
-    /**
      * Propriété contenant la liste de toutes les formations.
      */
-    private List<Formation> lesFormationsAll = new ArrayList<>();
-    /**
-     * Propriété contenant la liste des formations en cours d'utilisation.
-     */
-    private List<Formation> lesFormationsChoix = new ArrayList<>();
+    private static List<Formation> lesFormationsAll = new ArrayList<>();
     /**
      * Propriété contenant la liste des formations marquées comme favorites.
      */
     private final List<Formation> lesFormationsFavorites = new ArrayList<>();
     /**
+     * Propriété contenant la liste des formations en cours d'utilisation.
+     */
+    private List<Formation> lesFormationsChoix = new ArrayList<>();
+
+    /**
      * Propriété contenant la liste des id des formations favorites.
      */
     private static List<Integer> lesFavoris = new ArrayList<>();
+
+    /**
+     * Propriété contenant le choix de l'activité.
+     */
+    private static String choix = "";
+
     /**
      * Propriété d'acces à la base de données Locale.
      */
@@ -49,12 +53,11 @@ public class Controle {
      * Propriété d'instance du controleur.
      */
     private static Controle instance = null;
-
-
     /**
-     * Propriété contenant le choix de l'activité
+     * Propriété contenant une formation.
      */
-    private static String choix = "";
+    private Formation formation;
+
 
 
     /**
@@ -64,8 +67,10 @@ public class Controle {
         super();
     }
 
+
     /**
      * Methode de récupération de l'instance unique du Controleur.
+     *
      * @param context Context
      * @return instance
      */
@@ -77,7 +82,7 @@ public class Controle {
             handler.postDelayed(() -> {
                 accesDistant = new AccesDistant();
                 accesDistant.envoi("tous", null);
-            }, 1000); //1 seconde
+            }, 2000); //2 secondes
 
             accesLocal = new AccesLocal(context);
             lesFavoris = accesLocal.recup();
@@ -87,12 +92,40 @@ public class Controle {
     }
 
     /**
+     * Methode qui permet de nettoyer la base de donnée locale si une formation est supprimée.
+     */
+    public static void checkLesFavoris() {
+        List<Integer> testIdFavoris = new ArrayList<>();
+        for (Formation uneFormation : lesFormationsAll) {
+            testIdFavoris.add(uneFormation.getId());
+        }
+
+        for (int i = 0; i < lesFavoris.size(); i++) {
+            if (!testIdFavoris.contains(lesFavoris.get(i))) {
+                Log.d("checkFav", "Suppr  favoris: " + lesFavoris.get(i).toString());
+                accesLocal.removeFavoris(lesFavoris.get(i));
+                lesFavoris.remove(lesFavoris.get(i));
+            }
+        }
+    }
+
+
+    /**
      * Setter sur la liste lesFavorites.
      *
      * @return lesFavoris List<Integer>
      */
     public static List<Integer> getLesFavoris() {
         return lesFavoris;
+    }
+
+    /**
+     * Setter sur le choix de l'activité.
+     *
+     * @param choix String
+     */
+    public static void setChoix(String choix) {
+        Controle.choix = choix;
     }
 
     /**
@@ -117,7 +150,7 @@ public class Controle {
     public void ajoutFavoris(Formation favFormation) {
         if (!lesFavoris.contains(favFormation.getId())) {
             lesFavoris.add(favFormation.getId());
-            accesLocal.ajoutfavoris(favFormation.getId());
+            accesLocal.ajoutFavoris(favFormation.getId());
             lesFormationsFavorites.add(favFormation);
         }
     }
@@ -128,11 +161,12 @@ public class Controle {
      * @param notfavFormation Formation
      */
     public void removeFav(Formation notfavFormation) {
-        accesLocal.removefavoris(notfavFormation.getId());
-        lesFavoris.remove((Integer) notfavFormation.getId());
-        lesFormationsFavorites.remove(notfavFormation);
+        if(lesFavoris.contains(notfavFormation.getId())){
+            accesLocal.removeFavoris(notfavFormation.getId());
+            lesFavoris.remove((Integer) notfavFormation.getId());
+            lesFormationsFavorites.remove(notfavFormation);
+        }
     }
-
 
     /**
      * Methode qui retourne la liste des formations avec le filtre.
@@ -179,29 +213,18 @@ public class Controle {
         return lesFormationsAll;
     }
 
-
     /**
      * Setter sur la liste lesFormationsAll.
      *
      * @param lesFormationsAll List<Formation>
      */
     public void setLesFormationsAll(List<Formation> lesFormationsAll) {
-        this.lesFormationsAll = lesFormationsAll;
+        Controle.lesFormationsAll = lesFormationsAll;
     }
-
-
-    /**
-     * Setter sur le choix de l'activité.
-     *
-     * @param choix String
-     */
-    public static void setChoix(String choix) {
-        Controle.choix = choix;
-    }
-
 
     /**
      * Getter sur la liste des formations choisies.
+     *
      * @return lesFormationsChoix List<Formation>
      */
     public List<Formation> getLesFormationsChoix() {

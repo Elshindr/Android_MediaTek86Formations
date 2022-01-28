@@ -48,7 +48,7 @@ public class FormationsActivity extends AppCompatActivity {
      * @param savedInstanceState Bundle
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formations);
         init();
@@ -74,7 +74,7 @@ public class FormationsActivity extends AppCompatActivity {
      *
      * @param lesFormations List<Formation>
      */
-    private void creerListe(List<Formation> lesFormations) {
+    private void creerListe(final List<Formation> lesFormations) {
         if (lesFormations != null) {
             Collections.sort(lesFormations, Collections.reverseOrder());
             ListView listView = findViewById(R.id.lstFormations);

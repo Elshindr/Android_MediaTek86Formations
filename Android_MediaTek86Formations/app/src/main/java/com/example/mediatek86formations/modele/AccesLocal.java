@@ -37,21 +37,8 @@ public class AccesLocal {
      *
      * @param context Context
      */
-    public AccesLocal(Context context) {
+    public AccesLocal(final Context context) {
         accesBD = new MySQLiteOpenHelper(context, NOMBASE, VERSIONBASE);
-    }
-
-    /**
-     * Methode qui ajoute dans la base de donnée locale la valeur du paramétre fourni.
-     *
-     * @param id int
-     */
-    public void ajoutfavoris(int id) {
-        bd = accesBD.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("idformation", id);
-        bd.insert("favoris", null, values);
-        bd.close();
     }
 
     /**
@@ -67,23 +54,38 @@ public class AccesLocal {
         curseur.moveToFirst();
 
         while (!curseur.isAfterLast()) {
-            Integer idformation = curseur.getInt(0);
-
-            favoris.add(idformation);
+            Integer idFormation = curseur.getInt(0);
+            favoris.add(idFormation);
             curseur.moveToNext();
         }
         Log.d("recupfavoris", "id favoris: " + favoris.toString());
 
         curseur.close();
+
         return favoris;
     }
+
+
+    /**
+     * Methode qui ajoute dans la base de donnée locale la valeur du paramétre fourni.
+     *
+     * @param id int
+     */
+    public void ajoutFavoris(final int id) {
+        bd = accesBD.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("idformation", id);
+        bd.insert("favoris", null, values);
+        bd.close();
+    }
+
 
     /**
      * Methode qui supprime l'id fourni de la base de donnée locale.
      *
      * @param notFavId int
      */
-    public void removefavoris(int notFavId) {
+    public void removeFavoris(final int notFavId) {
         bd = accesBD.getWritableDatabase();
         bd.delete("favoris", "idformation=?", new String[]{String.valueOf(notFavId)});
         Log.d("suppr", "id: " + notFavId);

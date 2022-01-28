@@ -109,14 +109,12 @@ public class FormationListAdapter extends BaseAdapter {
             viewProperties = (ViewProperties) view.getTag();
         }
 
-        viewProperties.txtListeTitle.setText(lesFormations.get(i).getTitle());
-        viewProperties.txtListPublishedAt.setText(lesFormations.get(i).getPublishedAtToString());
         viewProperties.txtListeTitle.setTag(i);
+        viewProperties.txtListeTitle.setText(lesFormations.get(i).getTitle());
         viewProperties.txtListeTitle.setOnClickListener(this::ouvrirUneFormationActivity);
 
         viewProperties.txtListPublishedAt.setTag(i);
-        viewProperties.txtListPublishedAt.setOnClickListener(this::ouvrirUneFormationActivity);
-
+        viewProperties.txtListPublishedAt.setText(lesFormations.get(i).getPublishedAtToString());
         viewProperties.txtListPublishedAt.setOnClickListener(this::ouvrirUneFormationActivity);
 
         viewProperties.btnListFavori.setImageResource(selectFavBtnColor(i));
@@ -131,6 +129,7 @@ public class FormationListAdapter extends BaseAdapter {
             lesFavoris = Controle.getLesFavoris();
             notifyDataSetChanged();
         });
+
         return view;
     }
 

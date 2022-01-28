@@ -5,22 +5,22 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Classe de gestion d'une base de donnée MySQLite qui hérite de SQLiteOpenHelper
+ * Classe de gestion d'une base de donnée MySQLite qui hérite de SQLiteOpenHelper.
  */
 public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     /**
-     * Propriété contenant la requete de creation de la table
+     * Propriété contenant la requete de creation de la table.
      */
     private static final String CREATION = "create table favoris (idformation INTEGER NOT NULL);";
 
     /**
-     * Construction de l'accès à une base de données locale
+     * Construction de l'accès à une base de données locale.
      *
      * @param context Context
      * @param name    String
      * @param version int
      */
-    public MySQLiteOpenHelper(Context context, String name, int version) {
+    public MySQLiteOpenHelper(final Context context, final String name, final int version) {
         super(context, name, null, version);
     }
 
@@ -31,19 +31,19 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
      * @param db SQLiteDatabase
      */
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(final SQLiteDatabase db) {
         db.execSQL(CREATION);
     }
 
     /**
-     * méthode qui redéfinie OnUpgrade et est appelée automatiquement s'il y a changement de version de la base
+     * méthode qui redéfinie OnUpgrade et est appelée automatiquement s'il y a changement de version de la base.
      *
      * @param db         SQLiteDatabase
      * @param oldVersion int
      * @param newVersion int
      */
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(final SQLiteDatabase db, final int oldVersion, final int newVersion) {
         // non utilisée
     }
 
