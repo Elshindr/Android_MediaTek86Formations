@@ -1,6 +1,7 @@
 package com.example.mediatek86formations.modele;
 
 import com.example.mediatek86formations.outils.MesOutils;
+
 import java.util.Date;
 
 /**

@@ -16,7 +16,7 @@ import com.example.mediatek86formations.controleur.Controle;
 public class MainActivity extends AppCompatActivity {
 
     /**
-     * Méthode qui gére la création de l'activité
+     * Méthode qui gére la création de l'activité.
      *
      * @param savedInstanceState Bundle
      */

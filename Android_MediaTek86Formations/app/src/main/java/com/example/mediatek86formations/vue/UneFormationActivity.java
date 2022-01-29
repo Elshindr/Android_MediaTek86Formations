@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.mediatek86formations.R;
 import com.example.mediatek86formations.controleur.Controle;
 import com.example.mediatek86formations.modele.Formation;
@@ -13,17 +15,17 @@ import com.example.mediatek86formations.outils.MesOutils;
 
 
 /**
- * Classe Activité d'affichage d'une formation hérite de AppCompatActivity
+ * Classe Activité d'affichage d'une formation hérite de AppCompatActivity.
  */
 public class UneFormationActivity extends AppCompatActivity {
 
     /**
-     * Propriété graphique du button Image
+     * Propriété graphique du button Image.
      */
     private ImageButton btnPicture;
 
     /**
-     * Methode de creation de l'activité
+     * Methode de creation de l'activité.
      *
      * @param savedInstanceState Bundle
      */
@@ -35,7 +37,7 @@ public class UneFormationActivity extends AppCompatActivity {
     }
 
     /**
-     * Méthode d'initialisation des composants graphiques
+     * Méthode d'initialisation des composants graphiques.
      */
     private void init() {
         Controle controle = Controle.getInstance(this);
@@ -54,7 +56,7 @@ public class UneFormationActivity extends AppCompatActivity {
     }
 
     /**
-     * Méthode événementielle sur le clic du bouton btnPicture, charge l'activité Video
+     * Méthode événementielle sur le clic du bouton btnPicture, charge l'activité Video.
      */
     private void ecouteBtnPicture() {
         btnPicture.setOnClickListener(v -> {

@@ -11,16 +11,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Classe Interface contenant différentes methodes utilitaires
+ * Classe Interface contenant différentes methodes utilitaires.
  */
 public interface MesOutils {
 
     /**
-     * Méthode qui reçoit une date au format String et la convertit au format Date
+     * Méthode qui reçoit une date au format String et la convertit au format Date.
      *
      * @param strDate         String
-     * @param expectedPattern pour formater la date
-     * @return date convertie Date
+     * @param expectedPattern format de la date
+     * @return date  Date
      */
     static Date convertStringToDate(String strDate, String expectedPattern) {
         SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern);
@@ -34,7 +34,7 @@ public interface MesOutils {
 
 
     /**
-     * Methode qui reçoit une date au format Date et la convertit au format String
+     * Methode qui reçoit une date au format Date et la convertit au format String dd/MM/yyyy.
      *
      * @param uneDate au format Date
      * @return date convertie au format String
@@ -45,7 +45,7 @@ public interface MesOutils {
     }
 
     /**
-     * Methode qui charge une image à partir d'une url
+     * Methode qui charge une image à partir d'une url.
      *
      * @param img ImageButton
      * @param url String

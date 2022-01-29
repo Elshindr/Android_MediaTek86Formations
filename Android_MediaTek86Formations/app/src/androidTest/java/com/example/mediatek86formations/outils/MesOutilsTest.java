@@ -8,14 +8,15 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 /**
- * Classe de tests unitaires de MesOutils
+ * Classe de tests unitaires de la classe MesOutils
  */
 public class MesOutilsTest extends TestCase {
-    final String strDate = "2020-08-07 05:59:10";
-    final String expectedPattern = "yyyy-MM-dd HH:mm:ss";
-    final SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern);
-    Date date = new Date();
+    private final String strDate = "2020-08-07 05:59:10";
+    private final String format = "yyyy-MM-dd HH:mm:ss";
+    private final SimpleDateFormat formatter = new SimpleDateFormat(format);
+    private Date date = new Date();
 
     {
         try {
@@ -24,22 +25,26 @@ public class MesOutilsTest extends TestCase {
             e.printStackTrace();
         }
     }
-
-    private final Formation uneFormation = new Formation(13, date, "UML : Diagramme de cas d'utilisation", "Présentation du diagramme de cas d'utilisation à travers la construction d'un exemple.", "https://i.ytimg.com/vi/LDTDlXMV1xY/default.jpg", "https://i.ytimg.com/vi/LDTDlXMV1xY/sddefault.jpg", "LDTDlXMV1xY");
+    private final Formation uneFormation = new Formation(13, date, "titre", "description", "", "", "");
 
     /**
-     * Test unitaire vérifiant qu'un String est convertie en Date au format donné
+     * Test unitaire vérifiant qu'un String est converti en Date au format donné
      */
     public void testConvertStringToDate() {
-        assertEquals(date, MesOutils.convertStringToDate("2020-08-07 05:59:10", expectedPattern));
+        String leFormat = "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(leFormat);
+
+        assertEquals(date, MesOutils.convertStringToDate(dateFormat.format(date), leFormat));
     }
 
     /**
      * Test unitaire vérifiant qu'une Date est convertie en String au format donné
      */
     public void testConvertDateToString() {
-        assertEquals("07/08/2020", MesOutils.convertDateToString(uneFormation.getPublishedAt()));
+        String leFormat = "dd/MM/yyyy";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(leFormat);
+
+        assertEquals(dateFormat.format(date), MesOutils.convertDateToString(date));
+        assertEquals(dateFormat.format(date), MesOutils.convertDateToString(uneFormation.getPublishedAt()));
     }
-
-
 }

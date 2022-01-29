@@ -22,24 +22,13 @@ public class Controle {
      */
     private static List<Formation> lesFormationsAll = new ArrayList<>();
     /**
-     * Propriété contenant la liste des formations marquées comme favorites.
-     */
-    private final List<Formation> lesFormationsFavorites = new ArrayList<>();
-    /**
-     * Propriété contenant la liste des formations en cours d'utilisation.
-     */
-    private List<Formation> lesFormationsChoix = new ArrayList<>();
-
-    /**
      * Propriété contenant la liste des id des formations favorites.
      */
     private static List<Integer> lesFavoris = new ArrayList<>();
-
     /**
      * Propriété contenant le choix de l'activité.
      */
     private static String choix = "";
-
     /**
      * Propriété d'acces à la base de données Locale.
      */
@@ -54,10 +43,17 @@ public class Controle {
      */
     private static Controle instance = null;
     /**
+     * Propriété contenant la liste des formations marquées comme favorites.
+     */
+    private final List<Formation> lesFormationsFavorites = new ArrayList<>();
+    /**
+     * Propriété contenant la liste des formations en cours d'utilisation.
+     */
+    private List<Formation> lesFormationsChoix = new ArrayList<>();
+    /**
      * Propriété contenant une formation.
      */
     private Formation formation;
-
 
 
     /**
@@ -120,6 +116,15 @@ public class Controle {
     }
 
     /**
+     * Getter sur le choix de l'activité.
+     *
+     * @return choix String
+     */
+    public static String getChoix() {
+        return choix;
+    }
+
+    /**
      * Setter sur le choix de l'activité.
      *
      * @param choix String
@@ -128,13 +133,6 @@ public class Controle {
         Controle.choix = choix;
     }
 
-    /**
-     * Getter sur le choix de l'activité.
-     * @return
-     */
-    public static String getChoix() {
-        return choix;
-    }
     /**
      * Getter sur la liste lesFormationsFavorites.
      *
@@ -168,7 +166,7 @@ public class Controle {
      * @param notfavFormation Formation
      */
     public void removeFav(Formation notfavFormation) {
-        if(lesFavoris.contains(notfavFormation.getId())){
+        if (lesFavoris.contains(notfavFormation.getId())) {
             accesLocal.removeFavoris(notfavFormation.getId());
             lesFavoris.remove((Integer) notfavFormation.getId());
             lesFormationsFavorites.remove(notfavFormation);
@@ -216,7 +214,7 @@ public class Controle {
      *
      * @return lesFormations List<Formation>
      */
-    public List<Formation> getLesFormationsAll() {
+    public static List<Formation> getLesFormationsAll() {
         return lesFormationsAll;
     }
 

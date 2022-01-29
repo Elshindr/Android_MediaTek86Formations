@@ -44,7 +44,7 @@ public class VideoActivity extends AppCompatActivity {
         Formation formation = controle.getFormation();
         if (formation != null) {
             wbvYoutube = findViewById(R.id.wbvYoutube);
-            Log.d("init", "actiiiiiiiiiiiiiiiiiiiiiiive");
+            Log.d("onCreate", "******* Ouverture js");
             wbvYoutube.getSettings().setJavaScriptEnabled(true);
             wbvYoutube.setWebViewClient(new WebViewClient());
             wbvYoutube.loadUrl("https://www.youtube.com/embed/" + formation.getVideoId());

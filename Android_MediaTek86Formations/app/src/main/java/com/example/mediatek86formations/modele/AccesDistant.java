@@ -24,10 +24,7 @@ public class AccesDistant implements AsyncResponse {
      * Propriété contenant la chaine de l'adresse du serveur.
      */
     private static final String SERVERADDR = "https://api-mediatekformations.herokuapp.com/";
-    /**
-     * Propriété d'instance du controleur.
-     */
-    private final Controle controle;
+
     /**
      * Propriété d'instance du contexte de l'activité.
      */
@@ -37,7 +34,7 @@ public class AccesDistant implements AsyncResponse {
      * Constructeur de la classe AccesDistant, valorise la propriété controle.
      */
     public AccesDistant() {
-        controle = Controle.getInstance(context);
+        Controle.getInstance(context);
     }
 
     /**
@@ -46,7 +43,7 @@ public class AccesDistant implements AsyncResponse {
      * @param output String
      */
     @Override
-    public void processFinish(String output) {
+    public void processFinish(final String output) {
         Log.d("serveur", "************" + output);
         try {
             JSONObject retour = new JSONObject(output);
@@ -59,7 +56,7 @@ public class AccesDistant implements AsyncResponse {
                 for (int k = 0; k < infos.length(); k++) {
                     JSONObject info = new JSONObject(infos.get(k).toString());
                     int id = Integer.parseInt(info.getString("id"));
-                    Date publishedAt = MesOutils.convertStringToDate(info.getString("published_at"), "yyyy-MM-dd hh:mm:ss");
+                    Date publishedAt = MesOutils.convertStringToDate(info.getString("published_at"), "yyyy-MM-dd HH:mm:ss");
                     String title = info.getString("title");
                     String description = info.getString("description");
                     String miniature = info.getString("miniature");
@@ -68,7 +65,7 @@ public class AccesDistant implements AsyncResponse {
                     Formation formation = new Formation(id, publishedAt, title, description, miniature, picture, videoId);
                     lesFormations.add(formation);
                 }
-                controle.setLesFormationsAll(lesFormations);
+                Controle.setLesFormationsAll(lesFormations);
                 Controle.checkLesFavoris();
             }
         } catch (JSONException e) {
@@ -82,7 +79,7 @@ public class AccesDistant implements AsyncResponse {
      * @param operation      String
      * @param lesDonneesJSON JSONObject
      */
-    public void envoi(String operation, JSONObject lesDonneesJSON) {
+    public void envoi(final String operation, final JSONObject lesDonneesJSON) {
         AccesREST accesDonnees = new AccesREST();
         accesDonnees.delegate = this;
         String requesMethod = null;

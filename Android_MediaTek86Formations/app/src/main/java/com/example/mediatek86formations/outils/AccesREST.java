@@ -10,36 +10,36 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 /**
- * Classe technique de connexion distante HTTP
+ * Classe technique de connexion distante HTTP.
  */
 public class AccesREST extends AsyncTask<String, Integer, Long> {
 
     /**
-     * Propriété permettant de mettre en place la gestion du retour asynchrone
+     * Propriété permettant de mettre en place la gestion du retour asynchrone.
      */
     public AsyncResponse delegate = null;
     /**
-     * Propriété contenant la reponse du serveur
+     * Propriété contenant la reponse du serveur.
      */
     private String ret = "";
     /**
-     * Propriété contenant les paramètres d'envoi au serveur en POST
+     * Propriété contenant les paramètres d'envoi au serveur en POST.
      */
     private String parametres = "";
     /**
-     * Propriété contenant la methode d'envoi au serveur
+     * Propriété contenant la methode d'envoi au serveur.
      */
     private String requestMethod = "GET";
 
     /**
-     * Constructeur de la Classe AccesREST
+     * Constructeur de la Classe AccesREST.
      */
     public AccesREST() {
         super();
     }
 
     /**
-     * Methode qui ajoute des paramètres
+     * Methode qui ajoute des paramètres à la requete.
      *
      * @param valeur String
      */
@@ -58,22 +58,22 @@ public class AccesREST extends AsyncTask<String, Integer, Long> {
     }
 
     /**
-     * Setter sur la propriété requestMethod
+     * Setter sur la propriété requestMethod.
      *
      * @param requestMethod String
      */
-    public void setRequestMethod(String requestMethod) {
+    public void setRequestMethod(final String requestMethod) {
         this.requestMethod = requestMethod;
     }
 
     /**
-     * Méthode appelée par la méthode execute qui permet d'envoyer au serveur une liste de paramètres en GET
+     * Méthode appelée par la méthode execute qui permet d'envoyer au serveur une liste de paramètres en GET.
      *
      * @param urls contient l'adresse du serveur dans la case 0 de urls
      * @return null
      */
     @Override
-    protected Long doInBackground(String... urls) {
+    protected Long doInBackground(final String... urls) {
 
         // pour éliminer certaines erreurs
         System.setProperty("http.keepAlive", "false");
@@ -108,14 +108,14 @@ public class AccesREST extends AsyncTask<String, Integer, Long> {
     }
 
     /**
-     * Sur le retour du serveur, envoi l'information retournée à processFinish
+     * Sur le retour du serveur, envoi l'information retournée à processFinish.
      *
      * @param result Long
      * @deprecated AsyncTask
      */
     @Override
     @Deprecated
-    protected void onPostExecute(Long result) {
+    protected void onPostExecute(final Long result) {
         // ret contient l'information récupérée
         delegate.processFinish(this.ret);
     }
