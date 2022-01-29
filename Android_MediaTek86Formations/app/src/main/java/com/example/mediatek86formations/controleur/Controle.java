@@ -129,6 +129,13 @@ public class Controle {
     }
 
     /**
+     * Getter sur le choix de l'activité.
+     * @return
+     */
+    public static String getChoix() {
+        return choix;
+    }
+    /**
      * Getter sur la liste lesFormationsFavorites.
      *
      * @return lesFormationsFavorites List<Formation>
