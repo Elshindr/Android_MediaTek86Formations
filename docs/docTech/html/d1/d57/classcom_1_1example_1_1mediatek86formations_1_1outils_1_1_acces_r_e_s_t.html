@@ -17,10 +17,9 @@
     <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
     <script type="text/javascript" src="../../jquery.js"></script>
     <script type="text/javascript" src="../../dynsections.js"></script>
-    <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
+     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
     <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
@@ -41,33 +40,41 @@
         </table>
       </div>
       <!-- end header part --><!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Recherche','.html');
+/* @license-end */
+</script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',false,false,'search.php','Recherche');
+  initMenu('../../',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
 </div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html','../../'); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>com</b></li><li class="navelem"><b>example</b></li><li class="navelem"><b>mediatek86formations</b></li><li class="navelem"><a class="el" href="../../df/dda/namespacecom_1_1example_1_1mediatek86formations_1_1outils.html">outils</a></li><li class="navelem"><a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html">AccesREST</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
@@ -85,8 +92,8 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="separator:af8d4cea3d02a9338f4c52a284261a3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef603f626df2ac1742224dd2e4d1e0f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#aef603f626df2ac1742224dd2e4d1e0f3">addParam</a> (String valeur)</td></tr>
 <tr class="separator:aef603f626df2ac1742224dd2e4d1e0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04cd05f4cfc382065091d3bab46806b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#a04cd05f4cfc382065091d3bab46806b0">setRequestMethod</a> (String <a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#a7467bfd41dbd73531460c48810e88609">requestMethod</a>)</td></tr>
-<tr class="separator:a04cd05f4cfc382065091d3bab46806b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ab35ffc5a7c42eb385ca7ed079689e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#a6ab35ffc5a7c42eb385ca7ed079689e8">setRequestMethod</a> (final String <a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#a7467bfd41dbd73531460c48810e88609">requestMethod</a>)</td></tr>
+<tr class="separator:a6ab35ffc5a7c42eb385ca7ed079689e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
@@ -95,10 +102,10 @@ Attributs publics</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Fonctions membres protégées</h2></td></tr>
-<tr class="memitem:afe12871886696fe254836cedb9f3feb5"><td class="memItemLeft" align="right" valign="top">Long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#afe12871886696fe254836cedb9f3feb5">doInBackground</a> (String... urls)</td></tr>
-<tr class="separator:afe12871886696fe254836cedb9f3feb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45e7fba84a3d7211c18e9d615cd705ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#a45e7fba84a3d7211c18e9d615cd705ad">onPostExecute</a> (Long result)</td></tr>
-<tr class="separator:a45e7fba84a3d7211c18e9d615cd705ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a448cc0d815fe685883ece4db0b4ede69"><td class="memItemLeft" align="right" valign="top">Long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#a448cc0d815fe685883ece4db0b4ede69">doInBackground</a> (final String... urls)</td></tr>
+<tr class="separator:a448cc0d815fe685883ece4db0b4ede69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4138b51001f88b693c6ddb071c2821ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#a4138b51001f88b693c6ddb071c2821ec">onPostExecute</a> (final Long result)</td></tr>
+<tr class="separator:a4138b51001f88b693c6ddb071c2821ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -110,7 +117,7 @@ Attributs privés</h2></td></tr>
 <tr class="separator:a7467bfd41dbd73531460c48810e88609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p >Classe technique de connexion distante HTTP </p>
+<div class="textblock"><p >Classe technique de connexion distante HTTP. </p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="af8d4cea3d02a9338f4c52a284261a3bd" name="af8d4cea3d02a9338f4c52a284261a3bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8d4cea3d02a9338f4c52a284261a3bd">&#9670;&nbsp;</a></span>AccesREST()</h2>
@@ -126,7 +133,7 @@ Attributs privés</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Constructeur de la Classe <a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html">AccesREST</a> </p>
+<p >Constructeur de la Classe <a class="el" href="../../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html">AccesREST</a>. </p>
 
 </div>
 </div>
@@ -146,7 +153,7 @@ Attributs privés</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Methode qui ajoute des paramètres</p>
+<p >Methode qui ajoute des paramètres à la requete.</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">valeur</td><td>String </td></tr>
@@ -156,8 +163,8 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="afe12871886696fe254836cedb9f3feb5" name="afe12871886696fe254836cedb9f3feb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe12871886696fe254836cedb9f3feb5">&#9670;&nbsp;</a></span>doInBackground()</h2>
+<a id="a448cc0d815fe685883ece4db0b4ede69" name="a448cc0d815fe685883ece4db0b4ede69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a448cc0d815fe685883ece4db0b4ede69">&#9670;&nbsp;</a></span>doInBackground()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +175,7 @@ Attributs privés</h2></td></tr>
         <tr>
           <td class="memname">Long com.example.mediatek86formations.outils.AccesREST.doInBackground </td>
           <td>(</td>
-          <td class="paramtype">String...&#160;</td>
+          <td class="paramtype">final String...&#160;</td>
           <td class="paramname"><em>urls</em></td><td>)</td>
           <td></td>
         </tr>
@@ -179,7 +186,7 @@ Attributs privés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Méthode appelée par la méthode execute qui permet d'envoyer au serveur une liste de paramètres en GET</p>
+<p >Méthode appelée par la méthode execute qui permet d'envoyer au serveur une liste de paramètres en GET.</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">urls</td><td>contient l'adresse du serveur dans la case 0 de urls </td></tr>
@@ -190,8 +197,8 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="a45e7fba84a3d7211c18e9d615cd705ad" name="a45e7fba84a3d7211c18e9d615cd705ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45e7fba84a3d7211c18e9d615cd705ad">&#9670;&nbsp;</a></span>onPostExecute()</h2>
+<a id="a4138b51001f88b693c6ddb071c2821ec" name="a4138b51001f88b693c6ddb071c2821ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4138b51001f88b693c6ddb071c2821ec">&#9670;&nbsp;</a></span>onPostExecute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,7 +209,7 @@ Attributs privés</h2></td></tr>
         <tr>
           <td class="memname">void com.example.mediatek86formations.outils.AccesREST.onPostExecute </td>
           <td>(</td>
-          <td class="paramtype">Long&#160;</td>
+          <td class="paramtype">final Long&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
           <td></td>
         </tr>
@@ -213,7 +220,7 @@ Attributs privés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Sur le retour du serveur, envoi l'information retournée à processFinish</p>
+<p >Sur le retour du serveur, envoi l'information retournée à processFinish.</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">result</td><td>Long </td></tr>
@@ -224,8 +231,8 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="a04cd05f4cfc382065091d3bab46806b0" name="a04cd05f4cfc382065091d3bab46806b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04cd05f4cfc382065091d3bab46806b0">&#9670;&nbsp;</a></span>setRequestMethod()</h2>
+<a id="a6ab35ffc5a7c42eb385ca7ed079689e8" name="a6ab35ffc5a7c42eb385ca7ed079689e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ab35ffc5a7c42eb385ca7ed079689e8">&#9670;&nbsp;</a></span>setRequestMethod()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,13 +240,13 @@ Attributs privés</h2></td></tr>
         <tr>
           <td class="memname">void com.example.mediatek86formations.outils.AccesREST.setRequestMethod </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
+          <td class="paramtype">final String&#160;</td>
           <td class="paramname"><em>requestMethod</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Setter sur la propriété requestMethod</p>
+<p >Setter sur la propriété requestMethod.</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">requestMethod</td><td>String </td></tr>
@@ -261,7 +268,7 @@ Attributs privés</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Propriété permettant de mettre en place la gestion du retour asynchrone </p>
+<p >Propriété permettant de mettre en place la gestion du retour asynchrone. </p>
 
 </div>
 </div>
@@ -284,7 +291,7 @@ Attributs privés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Propriété contenant les paramètres d'envoi au serveur en POST </p>
+<p >Propriété contenant les paramètres d'envoi au serveur en POST. </p>
 
 </div>
 </div>
@@ -307,7 +314,7 @@ Attributs privés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Propriété contenant la methode d'envoi au serveur </p>
+<p >Propriété contenant la methode d'envoi au serveur. </p>
 
 </div>
 </div>
@@ -330,7 +337,7 @@ Attributs privés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Propriété contenant la reponse du serveur </p>
+<p >Propriété contenant la reponse du serveur. </p>
 
 </div>
 </div>
@@ -338,10 +345,8 @@ Attributs privés</h2></td></tr>
 <li>C:/Users/Ydrani/AndroidStudioProjects/Android-Mediatek/Android_MediaTek86Formations/app/src/main/java/com/example/mediatek86formations/outils/<a class="el" href="../../de/d10/_acces_r_e_s_t_8java.html">AccesREST.java</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
-<!--BEGIN !GENERATE_TREEVIEW-->
 <hr class="footer"/><address class="footer"><small>
 Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>

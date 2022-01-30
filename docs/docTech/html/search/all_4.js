@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['ecoutebtnpicture_0',['ecouteBtnPicture',['../classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_une_formation_activity.html#af7af3e67bfa3d5168d08fe7657f214ba',1,'com::example::mediatek86formations::vue::UneFormationActivity']]],
-  ['ecoutefiltre_1',['ecouteFiltre',['../classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a918f838f8dae3b8bf8812f6fe9fc5b93',1,'com::example::mediatek86formations::vue::FormationsActivity']]],
-  ['ecoutemenu_2',['ecouteMenu',['../classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_main_activity.html#a3f8322fb30b6b191f48996a994e7e2e3',1,'com::example::mediatek86formations::vue::MainActivity']]],
-  ['envoi_3',['envoi',['../classcom_1_1example_1_1mediatek86formations_1_1modele_1_1_acces_distant.html#a92ad9645f28394bce0924d885538a8cc',1,'com::example::mediatek86formations::modele::AccesDistant']]],
-  ['exampleinstrumentedtest_4',['ExampleInstrumentedTest',['../classcom_1_1example_1_1mediatek86formations_1_1_example_instrumented_test.html',1,'com::example::mediatek86formations']]],
-  ['exampleinstrumentedtest_2ejava_5',['ExampleInstrumentedTest.java',['../_example_instrumented_test_8java.html',1,'']]],
-  ['exampleunittest_6',['ExampleUnitTest',['../classcom_1_1example_1_1mediatek86formations_1_1_example_unit_test.html',1,'com::example::mediatek86formations']]],
-  ['exampleunittest_2ejava_7',['ExampleUnitTest.java',['../_example_unit_test_8java.html',1,'']]]
+  ['date_0',['date',['../d9/dd8/classcom_1_1example_1_1mediatek86formations_1_1modele_1_1_formation_test.html#a67fe69bfd8affef9b7685649bd336a3b',1,'com.example.mediatek86formations.modele.FormationTest.date()'],['../d1/dd6/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_mes_outils_test.html#ad6294540a71dd9da1b229039d11ed3d5',1,'com.example.mediatek86formations.outils.MesOutilsTest.date()']]],
+  ['delegate_1',['delegate',['../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#aacaab29f5b93140f904491de40b1a907',1,'com::example::mediatek86formations::outils::AccesREST']]],
+  ['description_2',['description',['../dc/d78/classcom_1_1example_1_1mediatek86formations_1_1modele_1_1_formation.html#a57887328830521560b5a96f29499448c',1,'com::example::mediatek86formations::modele::Formation']]],
+  ['doinbackground_3',['doInBackground',['../d1/d57/classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_acces_r_e_s_t.html#a448cc0d815fe685883ece4db0b4ede69',1,'com::example::mediatek86formations::outils::AccesREST']]]
 ];

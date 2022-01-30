@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['mainactivity_0',['MainActivity',['../classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_main_activity.html',1,'com::example::mediatek86formations::vue']]],
-  ['mainactivity_2ejava_1',['MainActivity.java',['../_main_activity_8java.html',1,'']]],
-  ['mesoutils_2',['MesOutils',['../interfacecom_1_1example_1_1mediatek86formations_1_1outils_1_1_mes_outils.html',1,'com::example::mediatek86formations::outils']]],
-  ['mesoutils_2ejava_3',['MesOutils.java',['../_mes_outils_8java.html',1,'']]],
-  ['miniature_4',['miniature',['../classcom_1_1example_1_1mediatek86formations_1_1modele_1_1_formation.html#a8ae204eec438a2b1fde6bbb37453592d',1,'com::example::mediatek86formations::modele::Formation']]],
-  ['mysqliteopenhelper_5',['MySQLiteOpenHelper',['../classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_my_s_q_lite_open_helper.html',1,'com.example.mediatek86formations.outils.MySQLiteOpenHelper'],['../classcom_1_1example_1_1mediatek86formations_1_1outils_1_1_my_s_q_lite_open_helper.html#ad00d1010d40f9da934debf94a33b5c68',1,'com.example.mediatek86formations.outils.MySQLiteOpenHelper.MySQLiteOpenHelper()']]],
-  ['mysqliteopenhelper_2ejava_6',['MySQLiteOpenHelper.java',['../_my_s_q_lite_open_helper_8java.html',1,'']]]
+  ['lesfavoris_0',['lesFavoris',['../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a2063cac87c2848bb47a815345a26f7c1',1,'com.example.mediatek86formations.controleur.Controle.lesFavoris()'],['../d7/d64/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formation_list_adapter.html#a7882274a81a150f9509d0f302a5c62ac',1,'com.example.mediatek86formations.vue.FormationListAdapter.lesFavoris()'],['../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#aef2baba6d7514ddb31fb42da8e33465d',1,'com.example.mediatek86formations.vue.FormationsActivity.lesFavoris()']]],
+  ['lesformations_1',['lesFormations',['../d7/d64/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formation_list_adapter.html#ac49e331811161dbc7bb22ec1152a6aa6',1,'com::example::mediatek86formations::vue::FormationListAdapter']]],
+  ['lesformationsall_2',['lesFormationsAll',['../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ae172e2e4eb19bb401d02681a23a1e374',1,'com::example::mediatek86formations::controleur::Controle']]],
+  ['lesformationschoix_3',['lesFormationsChoix',['../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a6f26a8b7641f462907bcb13464a481a4',1,'com.example.mediatek86formations.controleur.Controle.lesFormationsChoix()'],['../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a4df1cb0bd59cb189445d9c2d6e171a37',1,'com.example.mediatek86formations.vue.FormationsActivity.lesFormationsChoix()']]],
+  ['lesformationsfavorites_4',['lesFormationsFavorites',['../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#abd5c2749397031e4b3895520ff671e00',1,'com::example::mediatek86formations::controleur::Controle']]],
+  ['liste_20des_20éléments_20obsolètes_5',['Liste des éléments obsolètes',['../da/d58/deprecated.html',1,'']]],
+  ['loadmappreview_6',['loadMapPreview',['../de/d79/interfacecom_1_1example_1_1mediatek86formations_1_1outils_1_1_mes_outils.html#a48f9a7a6d01e5f4023ca135a99093168',1,'com::example::mediatek86formations::outils::MesOutils']]]
 ];

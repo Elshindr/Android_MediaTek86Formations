@@ -17,10 +17,9 @@
     <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
     <script type="text/javascript" src="../../jquery.js"></script>
     <script type="text/javascript" src="../../dynsections.js"></script>
-    <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
+     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
     <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
@@ -41,33 +40,41 @@
         </table>
       </div>
       <!-- end header part --><!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Recherche','.html');
+/* @license-end */
+</script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',false,false,'search.php','Recherche');
+  initMenu('../../',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
 </div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html','../../'); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>com</b></li><li class="navelem"><b>example</b></li><li class="navelem"><b>mediatek86formations</b></li><li class="navelem"><a class="el" href="../../d9/d50/namespacecom_1_1example_1_1mediatek86formations_1_1controleur.html">controleur</a></li><li class="navelem"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">Controle</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">com.example.mediatek86formations.controleur.Controle Liste des membres</div></div>
 </div><!--header-->
@@ -78,30 +85,30 @@ $(document).ready(function(){initNavTree('d1/d5e/classcom_1_1example_1_1mediatek
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#af317d78506b4ea886b739705a2b8e9d0">accesDistant</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a98e9189ead764c0cec8598bf193d7686">accesLocal</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a787b51a526dbdc2bb7e7865994c67a6e">ajoutFavoris</a>(Formation favFormation)</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ad0fc54a3e89f18cf285bdca1083cbba6">choix</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#aa1e7a1a8dfcdd5079ce5d91ff4de820d">Controle</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ad601a18cca53e3acede8545a974dd16f">formation</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ad98ff54738b79b511a3e3fe375d37cf2">checkLesFavoris</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ad0fc54a3e89f18cf285bdca1083cbba6">choix</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#aa1e7a1a8dfcdd5079ce5d91ff4de820d">Controle</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ad601a18cca53e3acede8545a974dd16f">formation</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a4cfd1efe072d2bff03b3b7a3585c8a33">getChoix</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a5cd258331dddc1a935a34df72325a1ec">getFormation</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ac1283d71d57999e1742a59cd749a2a51">getInstance</a>(Context context)</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a9a49e8ee65694a347babbfb7ff8ffdfd">getLesFavoris</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a1920dfbf04b401fc5b1dcde236dc9bb5">getLesFormationFiltre</a>(String filtre)</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a653ab82b7b9977a6b6d70aa0e04be667">getLesFormationsAll</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a9599238975493a6d78b8d667c34817e5">getLesFormationsAll</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a2defd7add751709c8f3ce8624c8c0441">getLesFormationsChoix</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a0218c0404db92c107b5efdfff606f621">getLesFormationsFavorites</a>()</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a800858960c3c13585242dd0cdb491865">instance</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a2063cac87c2848bb47a815345a26f7c1">lesFavoris</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ae172e2e4eb19bb401d02681a23a1e374">lesFormationsAll</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ae172e2e4eb19bb401d02681a23a1e374">lesFormationsAll</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a6f26a8b7641f462907bcb13464a481a4">lesFormationsChoix</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#abd5c2749397031e4b3895520ff671e00">lesFormationsFavorites</a></td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a6284b308c54b852ae05e6a91b452f2e2">removeFav</a>(Formation notfavFormation)</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#aa7025f27a5316026561263f461763839">setChoix</a>(String choix)</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a9b7eb460754dc98875468f404a1a4da3">setFormation</a>(Formation formation)</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#a779d2dd3e251efdce0f0d83f8abb3de0">setLesFormationsAll</a>(List&lt; Formation &gt; lesFormationsAll)</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html#ac0c5be45da5ceea530d764f7032843aa">setLesFormationsAll</a>(List&lt; Formation &gt; lesFormationsAll)</td><td class="entry"><a class="el" href="../../d1/d5e/classcom_1_1example_1_1mediatek86formations_1_1controleur_1_1_controle.html">com.example.mediatek86formations.controleur.Controle</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
-<!--BEGIN !GENERATE_TREEVIEW-->
 <hr class="footer"/><address class="footer"><small>
 Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>

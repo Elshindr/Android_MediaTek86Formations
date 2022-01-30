@@ -33,6 +33,7 @@ var menudata={children:[
 {text:"Hiérarchie des classes",url:"hierarchy.html"},
 {text:"Membres de classe",url:"functions.html",children:[
 {text:"Tout",url:"functions.html",children:[
+{text:"[",url:"functions.html#index__5B"},
 {text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
@@ -50,8 +51,10 @@ var menudata={children:[
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
 {text:"u",url:"functions.html#index_u"},
-{text:"v",url:"functions.html#index_v"}]},
+{text:"v",url:"functions.html#index_v"},
+{text:"w",url:"functions.html#index_w"}]},
 {text:"Fonctions",url:"functions_func.html",children:[
+{text:"[",url:"functions_func.html#index__5B"},
 {text:"a",url:"functions_func.html#index_a"},
 {text:"c",url:"functions_func.html#index_c"},
 {text:"d",url:"functions_func.html#index_d"},
@@ -81,6 +84,7 @@ var menudata={children:[
 {text:"s",url:"functions_vars.html#index_s"},
 {text:"t",url:"functions_vars.html#index_t"},
 {text:"u",url:"functions_vars.html#index_u"},
-{text:"v",url:"functions_vars.html#index_v"}]}]}]},
+{text:"v",url:"functions_vars.html#index_v"},
+{text:"w",url:"functions_vars.html#index_w"}]}]}]},
 {text:"Fichiers",url:"files.html",children:[
 {text:"Liste des fichiers",url:"files.html"}]}]}

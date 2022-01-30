@@ -17,10 +17,9 @@
     <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
     <script type="text/javascript" src="../../jquery.js"></script>
     <script type="text/javascript" src="../../dynsections.js"></script>
-    <link href="../../navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="../../resize.js"></script>
-<script type="text/javascript" src="../../navtreedata.js"></script>
-<script type="text/javascript" src="../../navtree.js"></script>
+     <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
     <link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
@@ -41,33 +40,41 @@
         </table>
       </div>
       <!-- end header part --><!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Recherche','.html');
+/* @license-end */
+</script>
 <script type="text/javascript" src="../../menudata.js"></script>
 <script type="text/javascript" src="../../menu.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('../../',false,false,'search.php','Recherche');
+  initMenu('../../',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
 </div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html','../../'); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>com</b></li><li class="navelem"><b>example</b></li><li class="navelem"><b>mediatek86formations</b></li><li class="navelem"><a class="el" href="../../d7/d45/namespacecom_1_1example_1_1mediatek86formations_1_1vue.html">vue</a></li><li class="navelem"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">FormationsActivity</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">com.example.mediatek86formations.vue.FormationsActivity Liste des membres</div></div>
 </div><!--header-->
@@ -77,18 +84,16 @@ $(document).ready(function(){initNavTree('d0/dd2/classcom_1_1example_1_1mediatek
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a907f3324a149e58e8f01e8f73b634a84">btnFiltrer</a></td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a5a48752b3892d910ff8228eeadb05031">controle</a></td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a7bff29649640e8f08d980c07ab18b57b">creerListe</a>(List&lt; Formation &gt; lesFormations)</td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a854d50bae91b065a5702d14b3d0a0aaa">creerListe</a>(final List&lt; Formation &gt; lesFormations)</td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a918f838f8dae3b8bf8812f6fe9fc5b93">ecouteFiltre</a>()</td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#acd8cfdc889bfbd64ea6d5b7b75b33180">init</a>()</td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#aef2baba6d7514ddb31fb42da8e33465d">lesFavoris</a></td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a4df1cb0bd59cb189445d9c2d6e171a37">lesFormationsChoix</a></td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#ad8364dd97fa7812daa496225ac3712e1">onCreate</a>(Bundle savedInstanceState)</td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a03aff097d242eb427aa90504fea6ad41">onCreate</a>(final Bundle savedInstanceState)</td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html#a4f3f039f99e627c29e2a65a4a09be7a9">txtFiltre</a></td><td class="entry"><a class="el" href="../../d0/dd2/classcom_1_1example_1_1mediatek86formations_1_1vue_1_1_formations_activity.html">com.example.mediatek86formations.vue.FormationsActivity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
-<!--BEGIN !GENERATE_TREEVIEW-->
 <hr class="footer"/><address class="footer"><small>
 Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
