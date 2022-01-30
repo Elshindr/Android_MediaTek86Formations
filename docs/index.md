@@ -17,7 +17,7 @@ L’application mobile de MediaTek86 est une plateforme mobile sous Android écr
 
 #### [Documentation Technique](https://elshindr.github.io/Android_MediaTek86Formations/docTech/html/index.html)
 
+####[Compte Rendu D'activité](https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/Rapport_AndroidMediatekFormations.pdf)
 
 TODO
-   - le lien vers le PDF du compte rendu d'activité ;
    - l'intégration de la vidéo de démonstration de l'utilisation de l’application.
