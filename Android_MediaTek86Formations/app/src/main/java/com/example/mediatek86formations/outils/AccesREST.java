@@ -1,6 +1,7 @@
 package com.example.mediatek86formations.outils;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -53,7 +54,7 @@ public class AccesREST extends AsyncTask<String, Integer, Long> {
                 parametres += "/" + URLEncoder.encode(valeur, "UTF-8");
             }
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            Log.d("addParam Exception",  e.getMessage());
         }
     }
 
@@ -91,7 +92,7 @@ public class AccesREST extends AsyncTask<String, Integer, Long> {
             reader = new BufferedReader(new InputStreamReader(connexion.getInputStream()));
             ret = reader.readLine();
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.d("doInBackgroundException",  e.getMessage());
         } finally {
             // fermeture du canal de réception
             try {
@@ -99,7 +100,7 @@ public class AccesREST extends AsyncTask<String, Integer, Long> {
                     reader.close();
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                Log.d("doInBackgroundException",  e.getMessage());
             }
         }
 

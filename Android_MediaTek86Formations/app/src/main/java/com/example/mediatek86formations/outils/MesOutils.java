@@ -1,6 +1,7 @@
 package com.example.mediatek86formations.outils;
 
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.widget.ImageButton;
 
 import java.io.IOException;
@@ -27,7 +28,7 @@ public interface MesOutils {
         try {
             return formatter.parse(strDate);
         } catch (ParseException e) {
-            e.printStackTrace();
+            Log.d("convertStringToDate",  e.getMessage());
         }
         return null;
     }
@@ -58,7 +59,7 @@ public interface MesOutils {
                 //edit the view in the UI thread
                 img.post(() -> img.setImageDrawable(drawable));
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.d("loadMapPreview",  e.getMessage());
             }
         }).start();
 
