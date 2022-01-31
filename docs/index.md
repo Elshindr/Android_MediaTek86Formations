@@ -1,6 +1,5 @@
 
-## Android MediaTek86Formations
-
+## Android MediaTek86Formations    
 <div align = "justify">
 MediaTek86 est un réseau de médiathèques situé dans la Vienne. Dans l’optique d’accroître l'attractivité de son réseau de médiathèques, MediaTek86 cherche à développer et enrichir ses services notamment par l’intermédiaire de plusieurs projets numériques sont pilotés par leur chef de projet numérique. Le projet DigimediaTek86 fait parti de cette liste de projet à mettre en place. L’objectif de ce projet s’étend sur deux axes, l’un interne puisqu’il implique la mise à disposition de services numériques pour ses employés, le second orienté vers ses usagers. Ici nous nous intéresseront à cette seconde partie puisque ce rapport détaille de la mise en place des nouvelles fonctionnalités dans l’application mobile de MediaTek86 dont la mise en place s’inscrit dans la volonté de fournir des formations au numérique en ligne.
 </div>
@@ -27,7 +26,10 @@ L’application mobile de MediaTek86 est une plateforme mobile sous Android écr
 
 #### [Suivi Trello](https://trello.com/b/zhxxvFMG/androidmediatek)
 
-<hr/>
+#### [Video de présentation](https://elshindr.github.io/Android_MediaTek86Formations/ressources/Video-IntroductionApplication.html)
+
+<hr/><br/>
+
 
 ### Tester l'application!
 
@@ -39,5 +41,5 @@ Il est possible de tester l'application si vous possèdez un appareil Android!
 - Cliquer sur l'apk afin que l'installation se lance.
 - Puis profiter enfin de votre nouvelle application !
 
-TODO
-   - l'intégration de la vidéo de démonstration de l'utilisation de l’application.
+
+   
