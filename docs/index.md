@@ -8,7 +8,7 @@ MediaTek86 est un réseau de médiathèques situé dans la Vienne. Dans l’opti
 <div align = "justify">
 L’application mobile de MediaTek86 est une plateforme mobile sous Android écrite en Java. Son objectif est de permettre à ses utilisateurs d’avoir accès à des vidéos d’auto-formations mise en ligne via la plateforme Youtube. L’application permet ainsi de rassembler ces formations via un même portail mobile. De plus, l’utilisateur doit pouvoir les trier selon le titre des formations afin d’accéder plus rapidement à la vidéo désirée. Dans cette même optique, un bouton à côté de chaque formation doit permettre de marquer comme favoris ces vidéos. Enfin, un bref descriptif contenant les différentes étapes(ou chapitres) de la vidéo doit être mis à disposition après avoir sélectionner une formation. Les données de ces formations doivent être stockées dans une base de données mise en ligne et une base de données locale doit permet de mémoriser les formations marquées comme favorites afin de pouvoir les récupérer à l’ouverture de l’application. Enfin, la base de données distante doit être accessible via une API REST. Pour en savoir davantage sur les différents éléments du présent contexte est accessible à ce lien. </div> [Contexte Détaillé](https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/App_Contextes/Contexte_MediaTek86.pdf)
 <p align="center">
-  <img src="https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/ressources/ImagesApplication.PNG" alt="Visuel de l'application"/>
+  <img src="https://elshindr.github.io/Android_MediaTek86Formations/blob/master/docs/ressources/ImagesApplication.PNG" alt="--"/>
 </p>
 <hr/>
 
@@ -28,8 +28,11 @@ L’application mobile de MediaTek86 est une plateforme mobile sous Android écr
 
 #### [Video de présentation](https://elshindr.github.io/Android_MediaTek86Formations/ressources/Video-IntroductionApplication.html)
 
-<hr/><br/>
 
+        <div id="main" class="text-center">
+            <iframe title="Android MediaTekFormation" src="https://tv.atmx.ca/videos/embed/48559a2e-b01f-4d8c-af45-c0e69bed647b" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
+    </div>
+<hr/><br/>
 
 ### Tester l'application!
 
