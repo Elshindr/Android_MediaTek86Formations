@@ -14,23 +14,18 @@ L’application mobile de MediaTek86 est une plateforme mobile sous Android écr
 
 ### Envie de lecture ?
 
-#### [Existant & Besoins](https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/App_Contextes/DossierDocumentaire_Existant.pdf)    
 
-#### [Dépot Github](https://github.com/Elshindr/Android_MediaTek86Formations)
+[<img src="https://elshindr.github.io/Android_MediaTek86Formations/ressources/Button1.png" alt="Existant & Besoins">](https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/App_Contextes/DossierDocumentaire_Existant.pdf)
+[<img src="https://elshindr.github.io/Android_MediaTek86Formations/ressources/Button2.png" alt="Dépot Github">](https://github.com/Elshindr/Android_MediaTek86Formations)
+[<img src="https://elshindr.github.io/Android_MediaTek86Formations/ressources/Button3.png" alt="Script SQL">](https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/App_Contextes/script_sql_mediatek86formations.zip)
+[<img src="https://elshindr.github.io/Android_MediaTek86Formations/ressources/Button4.png" alt="Documentation Technique">](https://elshindr.github.io/Android_MediaTek86Formations/docTech/html/index.html)
+[<img src="https://elshindr.github.io/Android_MediaTek86Formations/ressources/Button5.png" alt="Compte Rendu D'activité">](https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/Rapport_AndroidMediatekFormations.pdf)
+[<img src="https://elshindr.github.io/Android_MediaTek86Formations/ressources/Button6.png" alt="Suivi Trello">](https://trello.com/b/zhxxvFMG/androidmediatek)
 
-#### [Script SQL](https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/App_Contextes/script_sql_mediatek86formations.zip)
-
-#### [Documentation Technique](https://elshindr.github.io/Android_MediaTek86Formations/docTech/html/index.html)
-
-#### [Compte Rendu D'activité](https://github.com/Elshindr/Android_MediaTek86Formations/blob/master/docs/Rapport_AndroidMediatekFormations.pdf)
-
-#### [Suivi Trello](https://trello.com/b/zhxxvFMG/androidmediatek)
-
-#### [Video de présentation](https://elshindr.github.io/Android_MediaTek86Formations/ressources/Video-IntroductionApplication.html)
 
 <hr/><br/>
 
-<div>
+<div align="center">
 <iframe title="Android MediaTekFormation" src="https://tv.atmx.ca/videos/embed/48559a2e-b01f-4d8c-af45-c0e69bed647b" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
     </div>
     
