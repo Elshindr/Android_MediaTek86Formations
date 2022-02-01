@@ -12,7 +12,8 @@ L’application mobile de MediaTek86 est une plateforme mobile sous Android écr
 <p align="center">
   <img src="https://elshindr.github.io/Android_MediaTek86Formations/ressources/ImagesApplication.PNG" alt="Application visuel"/>
 </p>
-<br/><hr/>
+<br/>
+<hr/>
 
 ### Envie de lecture ?
 
@@ -32,13 +33,15 @@ L’application mobile de MediaTek86 est une plateforme mobile sous Android écr
   <img src="https://elshindr.github.io/Android_MediaTek86Formations/ressources/Bouton6.PNG" alt="Suivi Trello"/></a>
 </div>
 
-<hr/><br/>
+<hr/>
+<br/>
 
 <div align="center">
 <iframe title="Android MediaTekFormation" src="https://tv.atmx.ca/videos/embed/48559a2e-b01f-4d8c-af45-c0e69bed647b" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
-    </div>
+</div>
     
-<hr/><br/>
+<hr/>
+<br/>
 
 ### Tester l'application!
 
