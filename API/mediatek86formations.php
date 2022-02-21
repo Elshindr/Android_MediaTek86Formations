@@ -11,12 +11,11 @@ $controle = new Controle();
 
 // récupération des données
 // Nom de la table
-$table = filter_input(INPUT_GET, 'table', FILTER_SANITIZE_STRING) ??
-        filter_input(INPUT_POST, 'table', FILTER_SANITIZE_STRING);
+$table = filter_input(INPUT_GET, 'formation', FILTER_SANITIZE_STRING) ??
+        filter_input(INPUT_POST, 'formation', FILTER_SANITIZE_STRING);
 // nom et valeur des champs au format json
-//$contenu = filter_input(INPUT_GET, 'contenu', FILTER_SANITIZE_STRING,FILTER_FLAG_NO_ENCODE_QUOTES) ??
-//           filter_input(INPUT_POST, 'contenu', FILTER_SANITIZE_STRING,FILTER_FLAG_NO_ENCODE_QUOTES);
-$table = "formation";
+
+//$table = "formation";
 $id = null;
 $contenu = "";
 
