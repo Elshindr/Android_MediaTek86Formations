@@ -15,7 +15,7 @@ $table = filter_input(INPUT_GET, 'formation', FILTER_SANITIZE_STRING) ??
         filter_input(INPUT_POST, 'formation', FILTER_SANITIZE_STRING);
 // nom et valeur des champs au format json
 
-//$table = "formation";
+$table = "formation";
 $id = null;
 $contenu = "";
 
