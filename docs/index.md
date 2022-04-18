@@ -37,7 +37,7 @@ L’application mobile de MediaTek86 est une plateforme mobile sous Android écr
 <br/>
 
 <div align="center">
-<iframe title="Android MediaTekFormation" src="https://tv.atmx.ca/videos/embed/48559a2e-b01f-4d8c-af45-c0e69bed647b" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="560" height="315" frameborder="0"></iframe>
+<iframe width="760" height="515" src="https://www.youtube.com/embed/EdYKrFITby0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
     
 <hr/>
