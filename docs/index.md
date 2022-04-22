@@ -48,7 +48,7 @@ L’application mobile de MediaTek86 est une plateforme mobile sous Android écr
 Il est possible de tester l'application si vous possèdez un appareil Android!
 - Pour cela il suffit de télécharger la release de l'apk à ce [lien](https://github.com/Elshindr/Android_MediaTek86Formations/releases/tag/Apk_AndroidMediaTek)
 - De brancher votre appareil Android à votre poste afin de glisser/déposser l'apk dans le dossier de téléchargement.
-- N'oubliez d'activer l'"option développeur" dans les paramètres! Ainsi que le débogage par USB de votre appareil Android!
+- N'oubliez pas d'activer l'"option développeur" dans les paramètres! Ainsi que le débogage par USB de votre appareil Android!
 - Une fois sur votre appareil, rendez-vous dans les fichiers de téléchargement! Un dossier APK devrait s'y trouver!
 - Cliquer sur l'apk afin que l'installation se lance.
 - Puis profiter enfin de votre nouvelle application !
